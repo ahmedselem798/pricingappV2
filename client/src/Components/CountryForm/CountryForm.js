@@ -35,7 +35,7 @@ function CountryForm() {
               <Form.Group>
                 <Row>
                   <Col>
-                    <Form.Label>Country</Form.Label>
+                    <Form.Label>Country Name</Form.Label>
                     <Form.Control
                       type="text"
                       value={formData.countryName}
@@ -51,8 +51,8 @@ function CountryForm() {
                     <Form.Label>Network</Form.Label>
                     <Form.Control
                       type="text"
-                      value={network}
-                      onChange={(e) => setNetwork(e.target.value)}
+                      value={networks}
+                      onChange={(e) => setNetworks(e.target.value)}
                     />
                   </Col>
                 </Row>
@@ -72,8 +72,8 @@ function CountryForm() {
                     <Form.Label>Data Cost</Form.Label>
                     <Form.Control
                       type="text"
-                      value={dataCost}
-                      onChange={(e) => setDataCost(e.target.value)}
+                      value={dataCosts}
+                      onChange={(e) => setDataCosts(e.target.value)}
                     />
                   </Col>
                 </Row>
@@ -128,7 +128,7 @@ function CountryForm() {
 
               <Form.Group>
                 <Form.Label className="notes">Notes</Form.Label>
-                <Form.Control as="textarea" rows={3} value={notes} />
+                <Form.Control as="textarea" rows={3} value={notes} onChange={(e) => setNotes(e.target.value)}/>
               </Form.Group>
 
               <Button type="submit" className="btn">
