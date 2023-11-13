@@ -21,7 +21,7 @@ const CountriesTable = () => {
             <th>LTE_M</th>
             <th>NB_IoT</th>
             <th>Notes</th>
-            <th>Actions</th> {/* New column for actions */}
+            <th>Actions</th> 
           </tr>
         </thead>
         <tbody>
