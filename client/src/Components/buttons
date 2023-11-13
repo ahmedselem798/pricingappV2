@@ -1,0 +1,83 @@
+            <Button type="button" variant="secondary" size="lg"
+                 >
+                  Add
+            </Button>
+                
+            <Button type="button" variant="third" size="lg"
+                 >
+                  Edit
+            </Button>
+
+            .btn-secondary {
+                background-color: rgb(237, 82, 34);
+                border-color: #cb854f;
+                color: white;
+                border: none;
+                border-radius: 5%;
+                width: 19%;
+                height: 35px;
+                font-size: 15px;
+                margin-left: 80%;
+                margin-bottom: -5px;
+                cursor: pointer;
+                font-style: italic;
+                align-items: center;
+              } 
+              
+              .btn-secondary:hover {
+                background-color: #5fb890;
+                border-color: #5fb890;
+              }
+            
+              .btn-third {
+                background-color: rgb(237, 82, 34);
+                background-color: rgb(237, 82, 34);
+                color: white;
+                border: none;
+                border-radius: 5%;
+                width: 19%;
+                height: 35px;
+                font-size: 15px;
+                margin-left: 57%;
+                margin-top: -53px;
+                cursor: pointer;
+                font-style: italic;
+                align-items: center;
+              } 
+              
+              .btn-third:hover {
+                background-color: rgb(233, 23, 23);
+                border-color: rgb(250, 128, 128);
+              }
+
+
+<!-- const countryOptions = [
+  { value: 'afghanistan', label: 'Afghanistan' },
+  { value: 'aland-islands', label: 'Aland Islands' },
+  { value: 'albania', label: 'Albania' },
+  { value: 'algeria', label: 'Algeria' },
+  { value: 'andorra', label: 'Andorra' },
+  { value: 'angola', label: 'Angola' },
+  { value: 'anguilla', label: 'Anguilla' },
+  { value: 'antigua-and-barbuda', label: 'Antigua and Barbuda' },
+  { value: 'argentina', label: 'Argentina' },
+  { value: 'armenia', label: 'Armenia' },
+  { value: 'aruba', label: 'Aruba' },
+  { value: 'australia', label: 'Australia' },
+  { value: 'austria', label: 'Austria' },
+  { value: 'bahrain', label: 'Bahrain' },
+  { value: 'canada', label: 'Canada' },
+  { value: 'france', label: 'France' },
+  { value: 'germany', label: 'Germany' },
+  { value: 'kuwait', label: 'Kuwait' },
+  { value: 'nigeria', label: 'Nigeria' },
+  { value: 'oman', label: 'Oman' },
+  { value: 'philippines', label: 'Philippines' },
+  { value: 'qatar', label: 'Qatar' },
+  { value: 'saudi', label: 'Saudi Arabia' },
+  { value: 'singapore', label: 'Singapore' },
+  { value: 'turkey', label: 'Turkey' },
+  { value: 'uae', label: 'UAE' },
+  { value: 'unitedkingdom', label: 'United Kingdom' },
+  { value: 'unitedstates', label: 'United States' },
+]; -->
