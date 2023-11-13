@@ -1,34 +1,34 @@
-import React, { useState } from 'react';
-import './CountryForm.css';
-import { Form, Container, Row, Col, Button, InputGroup } from 'react-bootstrap';
+import React, { useState } from "react";
+import "./CountryForm.css";
+import { Form, Container, Row, Col, Button, InputGroup } from "react-bootstrap";
 
 function CountryForm() {
-  const [networks, setNetworks] = useState(['']);
-  const [vpmnValue, setVpmnValue] = useState(['']);
-  const [dataCosts, setDataCosts] = useState(['']);
-  const [imsi, setImsi] = useState(['']);
-  const [provider, setProvider] = useState(['']);
-  const [notes, setNotes] = useState('');
+  const [networks, setNetworks] = useState([""]);
+  const [vpmnValue, setVpmnValue] = useState([""]);
+  const [dataCosts, setDataCosts] = useState([""]);
+  const [imsi, setImsi] = useState([""]);
+  const [provider, setProvider] = useState([""]);
+  const [notes, setNotes] = useState("");
   const [formData, setFormData] = useState({
-    countryName: '',
+    countryName: "",
     technologies: [
-      { label: '2G', value: '' },
-      { label: '3G', value: '' },
-      { label: 'LTE', value: '' },
-      { label: '5G', value: '' },
-      { label: 'LTE-M', value: '' },
-      { label: 'NB_IoT', value: '' },
+      { label: "2G", value: "" },
+      { label: "3G", value: "" },
+      { label: "LTE", value: "" },
+      { label: "5G", value: "" },
+      { label: "LTE-M", value: "" },
+      { label: "NB_IoT", value: "" },
     ],
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form data:', formData);
+    console.log("Form data:", formData);
   };
 
   return (
-    <Container fluid className='container-xxl'>
-      <Container className='container'>
+    <Container fluid className="container-xxl">
+      <Container className="container">
         <Row>
           <Col>
             <Form onSubmit={handleSubmit}>
@@ -39,7 +39,12 @@ function CountryForm() {
                     <Form.Control
                       type="text"
                       value={formData.countryName}
-                      onChange={(e) => setFormData({ ...formData, countryName: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          countryName: e.target.value,
+                        })
+                      }
                     />
                   </Col>
                   <Col>
@@ -95,7 +100,7 @@ function CountryForm() {
                 </Row>
               </Form.Group>
 
-              <h2 className='h1'>Technologies</h2>
+              <h2 className="h1">Technologies</h2>
 
               <Row>
                 {formData.technologies.map((technology, index) => (
@@ -106,7 +111,9 @@ function CountryForm() {
                         placeholder={technology.label}
                         value={technology.value}
                         onChange={(e) => {
-                          const updatedTechnologies = [...formData.technologies];
+                          const updatedTechnologies = [
+                            ...formData.technologies,
+                          ];
                           updatedTechnologies[index].value = e.target.value;
                           setFormData({
                             ...formData,
@@ -120,7 +127,7 @@ function CountryForm() {
               </Row>
 
               <Form.Group>
-                <Form.Label className='notes'>Notes</Form.Label>
+                <Form.Label className="notes">Notes</Form.Label>
                 <Form.Control as="textarea" rows={3} value={notes} />
               </Form.Group>
 
@@ -136,4 +143,3 @@ function CountryForm() {
 }
 
 export default CountryForm;
-
