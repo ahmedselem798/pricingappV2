@@ -1,10 +1,11 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './CountriesTable.css'; // Import your stylesheet
+import './CountriesTable.css'; 
 
 const CountriesTable = () => {
   return (
     <div>
+      <button className="btn custom-btn btn-success mb-3">Add Country</button>
       <table className="table table-striped-columns">
         <thead>
           <tr>
@@ -40,8 +41,8 @@ const CountriesTable = () => {
             <td>no</td>
             <td>No notes yet</td>
             <td>
-              <button className="btn custom-btn btn-edit mr-2">Edit</button>
-              <button className="btn custom-btn btn-add">Add</button>
+              <button className="btn custom-btn btn-edit mr-2">Delete</button>
+              <button className="btn custom-btn btn-add">Edit</button>
             </td>
           </tr>
         </tbody>
