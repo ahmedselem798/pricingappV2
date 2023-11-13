@@ -1,0 +1,20 @@
+
+.custom-btn {
+    border-radius: 10px;
+    padding: 5px 10px;
+  }
+  
+  .btn-edit {
+    background-color: rgb(220, 145, 53); 
+    margin-right: 10px;
+    width: 40%;
+    color: #fff; 
+  }
+  
+  .btn-add {
+    background-color: #297553; 
+    color: #fff; 
+    width: 40%;
+
+  }
+  
