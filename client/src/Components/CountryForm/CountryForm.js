@@ -3,6 +3,7 @@ import "./CountryForm.css";
 import { Form, Container, Row, Col, Button, InputGroup } from "react-bootstrap";
 
 function CountryForm() {
+<<<<<<< HEAD
   const [networks, setNetworks] = useState([""]);
   const [vpmnValue, setVpmnValue] = useState([""]);
   const [dataCosts, setDataCosts] = useState([""]);
@@ -24,6 +25,41 @@ function CountryForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form data:", formData);
+=======
+  const [countryName, setCountryName] = useState('');
+  const [network, setNetwork] = useState('');
+  const [vpmnValue, setVpmnValue] = useState('');
+  const [dataCost, setDataCost] = useState('');
+  const [imsi, setImsi] = useState('');
+  const [provider, setProvider] = useState('');
+  const [notes, setNotes] = useState('');
+  const [technology2G, setTechnology2G] = useState('');
+  const [technology3G, setTechnology3G] = useState('');
+  const [technologyLTE, setTechnologyLTE] = useState('');
+  const [technology5G, setTechnology5G] = useState('');
+  const [technologyLTE_M, setTechnologyLTE_M] = useState('');
+  const [technologyNB_IoT, setTechnologyNB_IoT] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form data:', {
+      countryName,
+      network,
+      vpmnValue,
+      dataCost,
+      imsi,
+      provider,
+      notes,
+      technologies: {
+        '2G': technology2G,
+        '3G': technology3G,
+        LTE: technologyLTE,
+        '5G': technology5G,
+        'LTE-M': technologyLTE_M,
+        'NB_IoT': technologyNB_IoT,
+      },
+    });
+>>>>>>> 42513c716b02e45c0a16b05a11c4ff59167c91a6
   };
 
   return (
@@ -38,6 +74,7 @@ function CountryForm() {
                     <Form.Label>Country</Form.Label>
                     <Form.Control
                       type="text"
+<<<<<<< HEAD
                       value={formData.countryName}
                       onChange={(e) =>
                         setFormData({
@@ -45,15 +82,19 @@ function CountryForm() {
                           countryName: e.target.value,
                         })
                       }
+=======
+                      value={countryName}
+                      onChange={(e) => setCountryName(e.target.value)}
+>>>>>>> 42513c716b02e45c0a16b05a11c4ff59167c91a6
                     />
                   </Col>
                   <Col>
-                    <Form.Label>Networks</Form.Label>
-                    {networks.map((network, index) => (
-                      <InputGroup key={index} className="mb-2">
-                        <Form.Control type="text" value={network} />
-                      </InputGroup>
-                    ))}
+                    <Form.Label>Network</Form.Label>
+                    <Form.Control
+                      type="text"
+                      value={network}
+                      onChange={(e) => setNetwork(e.target.value)}
+                    />
                   </Col>
                 </Row>
               </Form.Group>
@@ -62,19 +103,19 @@ function CountryForm() {
                 <Row>
                   <Col>
                     <Form.Label>VPMN</Form.Label>
-                    {vpmnValue.map((vpmn, index) => (
-                      <InputGroup key={index} className="mb-2">
-                        <Form.Control type="text" value={vpmn} />
-                      </InputGroup>
-                    ))}
+                    <Form.Control
+                      type="text"
+                      value={vpmnValue}
+                      onChange={(e) => setVpmnValue(e.target.value)}
+                    />
                   </Col>
                   <Col>
                     <Form.Label>Data Cost</Form.Label>
-                    {dataCosts.map((dataCost, index) => (
-                      <InputGroup key={index} className="mb-2">
-                        <Form.Control type="text" value={dataCost} />
-                      </InputGroup>
-                    ))}
+                    <Form.Control
+                      type="text"
+                      value={dataCost}
+                      onChange={(e) => setDataCost(e.target.value)}
+                    />
                   </Col>
                 </Row>
               </Form.Group>
@@ -83,19 +124,19 @@ function CountryForm() {
                 <Row>
                   <Col>
                     <Form.Label>IMSI</Form.Label>
-                    {imsi.map((imsiValue, index) => (
-                      <InputGroup key={index} className="mb-2">
-                        <Form.Control type="number" value={imsiValue} />
-                      </InputGroup>
-                    ))}
+                    <Form.Control
+                      type="text"
+                      value={imsi}
+                      onChange={(e) => setImsi(e.target.value)}
+                    />
                   </Col>
                   <Col>
                     <Form.Label>Provider</Form.Label>
-                    {provider.map((providerValue, index) => (
-                      <InputGroup key={index} className="mb-2">
-                        <Form.Control type="text" value={providerValue} />
-                      </InputGroup>
-                    ))}
+                    <Form.Control
+                      type="text"
+                      value={provider}
+                      onChange={(e) => setProvider(e.target.value)}
+                    />
                   </Col>
                 </Row>
               </Form.Group>
@@ -103,6 +144,7 @@ function CountryForm() {
               <h2 className="h1">Technologies</h2>
 
               <Row>
+<<<<<<< HEAD
                 {formData.technologies.map((technology, index) => (
                   <Col key={index} md={6}>
                     <InputGroup className="mb-2">
@@ -130,10 +172,82 @@ function CountryForm() {
                 <Form.Label className="notes">Notes</Form.Label>
                 <Form.Control as="textarea" rows={3} value={notes} />
               </Form.Group>
+=======
+                <Col md={6}>
+                  <InputGroup className="mb-2">
+                    <Form.Control
+                      type="text"
+                      placeholder="2G"
+                      value={technology2G}
+                      onChange={(e) => setTechnology2G(e.target.value)}
+                    />
+                  </InputGroup>
+                </Col>
+                <Col md={6}>
+                  <InputGroup className="mb-2">
+                    <Form.Control
+                      type="text"
+                      placeholder="3G"
+                      value={technology3G}
+                      onChange={(e) => setTechnology3G(e.target.value)}
+                    />
+                  </InputGroup>
+                </Col>
+                <Col md={6}>
+                  <InputGroup className="mb-2">
+                    <Form.Control
+                      type="text"
+                      placeholder="LTE"
+                      value={technologyLTE}
+                      onChange={(e) => setTechnologyLTE(e.target.value)}
+                    />
+                  </InputGroup>
+                </Col>
+                <Col md={6}>
+                  <InputGroup className="mb-2">
+                    <Form.Control
+                      type="text"
+                      placeholder="5G"
+                      value={technology5G}
+                      onChange={(e) => setTechnology5G(e.target.value)}
+                    />
+                  </InputGroup>
+                </Col>
+                <Col md={6}>
+                  <InputGroup className="mb-2">
+                    <Form.Control
+                      type="text"
+                      placeholder="LTE-M"
+                      value={technologyLTE_M}
+                      onChange={(e) => setTechnologyLTE_M(e.target.value)}
+                    />
+                  </InputGroup>
+                </Col>
+                <Col md={6}>
+                  <InputGroup className="mb-2">
+                    <Form.Control
+                      type="text"
+                      placeholder="NB_IoT"
+                      value={technologyNB_IoT}
+                      onChange={(e) => setTechnologyNB_IoT(e.target.value)}
+                    />
+                  </InputGroup>
+                </Col>
+              </Row>
 
-              <button type="button" className="btn">
+              <Col>
+                <Form.Label className='notes'>Notes</Form.Label>
+                <Form.Control
+                  as="textarea" rows={3}
+                  value={notes}
+                  onChange={(e) => setNotes(e.target.value)}
+                />
+              </Col>
+>>>>>>> 42513c716b02e45c0a16b05a11c4ff59167c91a6
+
+              <Button type="submit" className="btn">
                 Submit
-              </button>
+              </Button>
             </Form>
           </Col>
         </Row>
