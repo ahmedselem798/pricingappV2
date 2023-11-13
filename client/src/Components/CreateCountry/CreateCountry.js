@@ -1,59 +1,70 @@
-import React, { useState } from 'react';
-import './CountryForm.css';
-import { Form, Container, Row, Col, Button, InputGroup } from 'react-bootstrap';
+import axios from "axios";
+// import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import "./CreateCountry.css";
+import { Form, Container, Row, Col, Button, InputGroup } from "react-bootstrap";
 
-function CountryForm() {
-  const [countryName, setCountryName] = useState('');
-  const [network, setNetwork] = useState('');
-  const [vpmnValue, setVpmnValue] = useState('');
-  const [dataCost, setDataCost] = useState('');
-  const [imsi, setImsi] = useState('');
-  const [provider, setProvider] = useState('');
-  const [notes, setNotes] = useState('');
+function CreateCountry() {
+  const [countryName, SetCountryName] = useState();
+  const [network, SetNetwork] = useState();
+  const [vpmn, SetVPMN] = useState();
+  const [imsi, SetIMSI] = useState();
+  const [dataCostPerMB, SetDataCost] = useState();
+  const [provider, SetProvider] = useState();
+  const [note, SetNote] = useState();
 
   // Separate state for each technology
-  const [technology2G, setTechnology2G] = useState('');
-  const [technology3G, setTechnology3G] = useState('');
-  const [technologyLTE, setTechnologyLTE] = useState('');
-  const [technology5G, setTechnology5G] = useState('');
-  const [technologyLTE_M, setTechnologyLTE_M] = useState('');
-  const [technologyNB_IoT, setTechnologyNB_IoT] = useState('');
+  const [_2G, Set2G] = useState("");
+  const [_3G, Set3G] = useState("");
+  const [_4G, Set4G] = useState("");
+  const [_5G, Set5G] = useState("");
+  const [lte, SetLTE] = useState("");
+  const [lte_m, SetLTE_M] = useState("");
+  const [nb_iot, SetNB_IoT] = useState("");
 
-  const handleSubmit = (e) => {
+  // Navigation
+  // const Navigate = useNavigate()
+  // Submit Function
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form data:', {
-      countryName,
-      network,
-      vpmnValue,
-      dataCost,
-      imsi,
-      provider,
-      notes,
-      technologies: {
-        '2G': technology2G,
-        '3G': technology3G,
-        LTE: technologyLTE,
-        '5G': technology5G,
-        'LTE-M': technologyLTE_M,
-        'NB_IoT': technologyNB_IoT,
-      },
-    });
+    try {
+      const result = await axios.post("http://localhost:5000/create", {
+        countryName,
+        network,
+        imsi,
+        vpmn,
+        provider,
+        note,
+        dataCostPerMB,
+        _4G,
+        _2G,
+        _3G,
+        _5G,
+        lte,
+        lte_m,
+        nb_iot,
+      });
+      console.log(result.data);
+      // Navigate('')
+    } catch (error) {
+      console.log(error.response);
+    }
   };
 
   return (
-    <Container fluid className='container-xxl'>
-      <Container className='container'>
+    <Container fluid className="container-xxl">
+      <Container className="container">
         <Row>
           <Col>
             <Form onSubmit={handleSubmit}>
               <Form.Group>
                 <Row>
                   <Col>
-                    <Form.Label>Country</Form.Label>
+                    <Form.Label>Country Name</Form.Label>
                     <Form.Control
                       type="text"
                       value={countryName}
-                      onChange={(e) => setCountryName(e.target.value)}
+                      onChange={(e) => SetCountryName(e.target.value)}
                     />
                   </Col>
                   <Col>
@@ -61,7 +72,7 @@ function CountryForm() {
                     <Form.Control
                       type="text"
                       value={network}
-                      onChange={(e) => setNetwork(e.target.value)}
+                      onChange={(e) => SetNetwork(e.target.value)}
                     />
                   </Col>
                 </Row>
@@ -73,16 +84,16 @@ function CountryForm() {
                     <Form.Label>VPMN</Form.Label>
                     <Form.Control
                       type="text"
-                      value={vpmnValue}
-                      onChange={(e) => setVpmnValue(e.target.value)}
+                      value={vpmn}
+                      onChange={(e) => SetVPMN(e.target.value)}
                     />
                   </Col>
                   <Col>
                     <Form.Label>Data Cost</Form.Label>
                     <Form.Control
                       type="text"
-                      value={dataCost}
-                      onChange={(e) => setDataCost(e.target.value)}
+                      value={dataCostPerMB}
+                      onChange={(e) => SetDataCost(e.target.value)}
                     />
                   </Col>
                 </Row>
@@ -95,7 +106,7 @@ function CountryForm() {
                     <Form.Control
                       type="text"
                       value={imsi}
-                      onChange={(e) => setImsi(e.target.value)}
+                      onChange={(e) => SetIMSI(e.target.value)}
                     />
                   </Col>
                   <Col>
@@ -103,13 +114,13 @@ function CountryForm() {
                     <Form.Control
                       type="text"
                       value={provider}
-                      onChange={(e) => setProvider(e.target.value)}
+                      onChange={(e) => SetProvider(e.target.value)}
                     />
                   </Col>
                 </Row>
               </Form.Group>
 
-              <h2 className='h1'>Technologies</h2>
+              <h2 className="h1">Technologies</h2>
 
               <Row>
                 <Col md={6}>
@@ -117,8 +128,8 @@ function CountryForm() {
                     <Form.Control
                       type="text"
                       placeholder="2G"
-                      value={technology2G}
-                      onChange={(e) => setTechnology2G(e.target.value)}
+                      value={_2G}
+                      onChange={(e) => Set2G(e.target.value)}
                     />
                   </InputGroup>
                 </Col>
@@ -127,8 +138,29 @@ function CountryForm() {
                     <Form.Control
                       type="text"
                       placeholder="3G"
-                      value={technology3G}
-                      onChange={(e) => setTechnology3G(e.target.value)}
+                      value={_3G}
+                      onChange={(e) => Set3G(e.target.value)}
+                    />
+                  </InputGroup>
+                </Col>
+                <Col md={6}>
+                  <InputGroup className="mb-2">
+                    <Form.Control
+                      type="text"
+                      placeholder="4G"
+                      value={_4G}
+                      onChange={(e) => Set4G(e.target.value)}
+                    />
+                  </InputGroup>
+                </Col>
+
+                <Col md={6}>
+                  <InputGroup className="mb-2">
+                    <Form.Control
+                      type="text"
+                      placeholder="5G"
+                      value={_5G}
+                      onChange={(e) => Set5G(e.target.value)}
                     />
                   </InputGroup>
                 </Col>
@@ -137,18 +169,8 @@ function CountryForm() {
                     <Form.Control
                       type="text"
                       placeholder="LTE"
-                      value={technologyLTE}
-                      onChange={(e) => setTechnologyLTE(e.target.value)}
-                    />
-                  </InputGroup>
-                </Col>
-                <Col md={6}>
-                  <InputGroup className="mb-2">
-                    <Form.Control
-                      type="text"
-                      placeholder="5G"
-                      value={technology5G}
-                      onChange={(e) => setTechnology5G(e.target.value)}
+                      value={lte}
+                      onChange={(e) => SetLTE(e.target.value)}
                     />
                   </InputGroup>
                 </Col>
@@ -157,8 +179,8 @@ function CountryForm() {
                     <Form.Control
                       type="text"
                       placeholder="LTE-M"
-                      value={technologyLTE_M}
-                      onChange={(e) => setTechnologyLTE_M(e.target.value)}
+                      value={lte_m}
+                      onChange={(e) => SetLTE_M(e.target.value)}
                     />
                   </InputGroup>
                 </Col>
@@ -167,19 +189,20 @@ function CountryForm() {
                     <Form.Control
                       type="text"
                       placeholder="NB_IoT"
-                      value={technologyNB_IoT}
-                      onChange={(e) => setTechnologyNB_IoT(e.target.value)}
+                      value={nb_iot}
+                      onChange={(e) => SetNB_IoT(e.target.value)}
                     />
                   </InputGroup>
                 </Col>
               </Row>
 
               <Col>
-                <Form.Label className='notes'>Notes</Form.Label>
+                <Form.Label className="notes">Notes</Form.Label>
                 <Form.Control
-                  as="textarea" rows={3}
-                  value={notes}
-                  onChange={(e) => setNotes(e.target.value)}
+                  as="textarea"
+                  rows={3}
+                  value={note}
+                  onChange={(e) => SetNote(e.target.value)}
                 />
               </Col>
 
@@ -194,4 +217,4 @@ function CountryForm() {
   );
 }
 
-export default CountryForm;
+export default CreateCountry;

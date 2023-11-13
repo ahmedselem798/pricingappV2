@@ -15,11 +15,11 @@ const CountriesSchema = new mongoose.Schema({
     required: true,
   },
   imsi: {
-    type: String,
+    type: Number,
     required: true,
   },
   dataCostPerMB: {
-    type: String,
+    type: Number,
     required: true,
   },
   provider: {
