@@ -1,0 +1,89 @@
+
+.container-xxl {
+  background-image: url('../../images/formbg2.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  margin: 0; 
+  padding: 10px; 
+  opacity: 0.8;
+}
+
+.container{
+  background: linear-gradient(to bottom, #c5e4d6, #72a58e);
+  padding: 30px;
+  border-radius: 10px;
+  margin: 20px;
+  margin-left: 7%;
+  margin-right: auto; 
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 55%;
+  opacity: 0.9;
+}
+
+  .form-label {
+    font-size: larger;
+    margin-right: 3%;
+    color:#002112; 
+    margin-left: 3%;
+    font-weight: 700;
+    font-style: italic;
+  }
+ 
+  .form-control {
+    margin-bottom: 20px;
+    border-radius: 1px; 
+    border-color: #e1f4e7;
+    padding: 5px; 
+    font-size: large; 
+    opacity: 0.8;
+    transition: border-color 0.8s;
+    width: 97%;
+    margin-left: 3%;
+    margin-top: 0.8%;
+    cursor: pointer;
+  }
+
+  .form-control:focus {
+      border-color: #0f482e; 
+  } 
+  .form-control:hover {
+    border-color: #297553; 
+    opacity: 0.7;
+} 
+
+  .h1{
+    margin-left: 0.5%;
+    margin-bottom: 17px;
+    margin-top: 20px;
+    color:#012916;
+    font-style: italic;
+    font-weight: 700;
+    font-size: x-large;
+  }
+
+  .notes{
+    font-size: larger;
+    font-weight: 700;
+  }
+
+  .btn {
+    color: #fff;
+    height: 40px;
+    width: 35%;
+    margin-top: 4.5%;
+    margin-left: 33%;
+    background-color: rgb(237, 82, 34);
+    font-size: large;
+    align-self: center;
+    cursor: pointer;
+    font-style: italic;
+  }
+
+  .btn:hover {
+    background-color: #eea66f;
+    border-color: #eea66f;
+}
+  
+
