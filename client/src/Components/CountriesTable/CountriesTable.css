@@ -1,32 +1,81 @@
+table {
+  margin-top: 4%;
+  width: 100%;
+}
 
-.custom-btn {
-    border-radius: 10px;
-    padding: 5px 10px;
-  }
-  
-  .btn-edit {
-    background-color: #e48f4e; 
-    margin-right: 10px;
-    width: 40%;
-    color: #fff; 
-  }
-  
-  .btn-add {
-    background-color: #297553; 
-    color: #fff; 
-    width: 40%;
+.table-striped-columns th.country-header {
+  cursor: pointer;
+}
 
-  }
-  
-  .btn-success{
-    background-color: #399f71;
-    width: 100%;
-    height: 60px;
-    border-radius: 0px;
-    font-size: larger;
-    font-weight: 600;
-  }
+.table-striped-columns th:first-child{
+  position: sticky;
+  left: 0;
+  z-index: 2;
+}
 
-  .btn-success:hover{
-    background-color: #267652;
-  }
+.table-striped-columns td:first-child{
+  position: sticky;
+  left: 0;
+  z-index: 2;
+}
+
+.btn.btn-success {
+  background-color: #398965;
+  border-color: #398965;
+  width: 100%;
+  height: 60px;
+  border-radius: 0;
+  font-size: larger;
+  font-weight: 600;
+  margin-top: -4%;
+  margin-left: 0;
+  margin-right: 0;
+  position: fixed;
+  z-index: 999;
+}
+
+.btn.btn-success:hover {
+  background-color: #5c9a7f;
+  border: 0;
+}
+
+.btn-container {
+  display: flex;
+}
+
+.btn {
+  margin-right: 5%;
+  margin-bottom: 10px;
+  width: calc(50% - 10px); 
+  border-radius: 10px;
+}
+
+.btn.btn-danger {
+  background-color: #df8845;
+  border-color: #df8845;
+  color: #fff;
+  margin-left: 9%;
+  display: flex;
+  justify-content: center;
+  width: 40%;
+}
+
+.btn.btn-danger:hover {
+  background-color: #e3b088;
+  border: 0;
+}
+
+.btn.btn-info {
+  background-color: #398965;
+  border-color: #398965;
+  color: white;
+  width: calc(120% - 2px); 
+  margin-top: 8px;
+  margin-left: 20%;
+}
+
+.btn.btn-info:hover {
+  background-color: #8cd6b5;
+  border: 0;
+}
+
