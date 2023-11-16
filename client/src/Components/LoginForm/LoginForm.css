@@ -1,0 +1,64 @@
+  
+  /* .container-sm {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 710px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    margin-left: 13%;
+    margin-top: 10px;
+    padding: 160px;
+    border-radius: 30px;
+  } */
+
+  .container-sm {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-top: 50px;
+    padding-top: 100px;
+    border-radius: 30px;
+  }
+  
+  .form-icon {
+    position: relative; 
+    margin-top: 3.5%;
+    margin-right: 17%; 
+    margin-left: 10%;
+  }
+  
+  .btn-secondary {
+    background-color: rgb(237, 82, 34);
+    border-color: #cb854f;
+    font-size: large;
+    color: white;
+    cursor: pointer;
+    margin-left: 10%;
+    margin-top: 2px; 
+    width: 90%;
+    height: 47px;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #eea66f;
+    border-color: #eea66f;
+  }
+  
+  .form-group-spacing {
+    margin-left: -10%;
+    margin-top: 20px;
+ }
+
+.text-start{
+    margin-top: -15px; 
+    margin-bottom: 35px; 
+    margin-left: 35%; 
+  }
+  
+  
