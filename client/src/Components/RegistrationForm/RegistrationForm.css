@@ -1,57 +1,56 @@
 
-body {
-    background-color: #aed6c4;
-  }
-  
-  .container {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 570px;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    margin: 50px;
-    margin-left: 17%;
-    margin-top: 60px;
-    padding: 10px;
-    border-radius: 30px;
-  }
-  
-  .form-icon {
-    position: relative; 
-    margin-right: 20px; 
-    margin-top: 3%;
-    margin-right: 50px; 
-  }
-  
-  .btn-primary {
-    /* background-color: #d88443; */
-    background-color: rgb(237, 82, 34);
-    border-color: #cb854f;
-    font-size: large;
-    color: white;
-    cursor: pointer;
-    margin-left: 5%;
-    margin-top: 2px; 
-    width: 70%;
-  }
-  
-  .btn-primary:hover {
-    background-color: #eea66f;
-    border-color: #eea66f;
-  }
-  
-  .form-group-spacing {
-    margin-left: -20%;
-    margin-top: -2px;
-  
-  }
-  
-  .custom-input {
-    font-size: 17px;
-    padding: 12px 15px;
-    margin-top: -7px;
-    margin-left: -30px; 
-  }
-  
+.registration-form-bg {
+  background-color: #aed6c4;
+}
+
+.container-md {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 710px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  margin-left: 13%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.form-icon {
+  position: relative; 
+  margin-right: 20px; 
+  margin-top: 3%;
+  margin-right: 50px; 
+}
+
+.btn-primary {
+  background-color: rgb(237, 82, 34);
+  border-color: #cb854f;
+  font-size: large;
+  color: white;
+  cursor: pointer;
+  margin-left: 5%;
+  margin-top: 2px; 
+  width: 70%;
+  height: 47px;
+}
+
+.btn-primary:hover {
+  background-color: #eea66f;
+  border-color: #eea66f;
+}
+
+.form-group-spacing {
+  margin-left: -20%;
+  margin-top: 4px;
+
+}
+
+.custom-input {
+  font-size: 17px;
+  padding: 12px 15px;
+  margin-top: -7px;
+  margin-left: -30px; 
+}

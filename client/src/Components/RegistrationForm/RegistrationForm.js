@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './RegistrationForm.css'; 
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import formbg4 from '../../images/formbg4.jpg';
@@ -12,8 +12,15 @@ import {
 } from 'react-bootstrap-icons';
 
 function RegistrationForm() {
+  useEffect(() => {
+    document.body.classList.add('registration-form-bg');
+
+    return () => {
+      document.body.classList.remove('registration-form-bg');
+    };
+  }, []);
   return (
-    <div className="container" style={{ backgroundImage: `url(${formbg4})` }}>
+    <div className="container-md" style={{ backgroundImage: `url(${formbg4})` }}>
       <Container>
         <Row className="justify-content-center">
           <Col md={6}>

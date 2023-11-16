@@ -54,7 +54,7 @@ function CreateCountry() {
 
   return (
     <Container fluid className="container-xxl">
-      <Container className="container">
+      <Container className="container-lg">
         <Row>
           <Col>
             <Form onSubmit={handleSubmit}>
@@ -207,7 +207,7 @@ function CreateCountry() {
                 />
               </Col>
 
-              <Button type="submit" className="btn">
+              <Button type="submit" className="btn btn-dark">
                 Submit
               </Button>
             </Form>
