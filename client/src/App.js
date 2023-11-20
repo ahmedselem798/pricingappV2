@@ -13,11 +13,11 @@ function App() {
     <div className="App">
     <BrowserRouter>
     <Routes>
-      <Route path='/' element = {<CountriesTable/>}/>
+      <Route path='/countries' element = {<CountriesTable/>}/>
       <Route path='/create' element = {<CreateCountry/>}/>
       <Route path='/update/:id' element = {<UpdateCountry />}/>
       <Route path='/reg' element = {<RegistrationForm/>}/>
-      <Route path='/login' element = {<LoginForm/>}/>
+      <Route path='/' element = {<LoginForm/>}/>
       <Route path='/reset-password' element = {<ResetPassword/>}/>
 
     </Routes>
