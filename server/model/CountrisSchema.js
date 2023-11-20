@@ -61,5 +61,4 @@ const CountriesSchema = new mongoose.Schema({
 });
 
 
-const CountriesModule = mongoose.model('CountriesData',CountriesSchema)
-module.exports = CountriesModule
+ mongoose.model('CountriesData',CountriesSchema)

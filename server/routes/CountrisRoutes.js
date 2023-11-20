@@ -1,17 +1,10 @@
 const mongoose = require("mongoose");
 
-const CountriesModule = require("../model/CountrisSchema");
+require("../model/CountrisSchema");
 
-async function CountriesConnection(app) {
-  mongoose
-    .connect("mongodb://127.0.0.1:27017/PricingApp")
-    .then(() => {
-      console.log("Countries Database Connected.....");
-    })
-    .catch(() => {
-      console.log("Faild to Connect Countries Database.....");
-    });
+const CountriesModule = mongoose.model("CountriesData");
 
+async function Countries(app) {
   app.post("/create", (req, res) => {
     CountriesModule.create(req.body)
       .then((country) => res.json(country))
@@ -73,14 +66,13 @@ async function CountriesConnection(app) {
       .then((country) => res.json(country))
       .catch((err) => res.json(err));
   });
-  
+
   app.get("/getCountry/:id", (req, res) => {
     const id = req.params.id;
     CountriesModule.findById({ _id: id })
       .then((country) => res.json(country))
       .catch((err) => res.json(err));
   });
-  
 }
 
-module.exports = CountriesConnection;
+module.exports = Countries;
