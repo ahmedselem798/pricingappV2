@@ -55,11 +55,18 @@ const CountriesTable = () => {
 
   return (
     <div>
-      <Link to="/create">
-        <button type="button" className="btn custom-btn btn-success mb-3">
+      <div className="d-flex mb-3">
+        <Link to="/" className="btn btn-warning mr-2">
+          Logout
+        </Link>
+        <Link to="/register" className="btn btn-warning">
+          Add User
+        </Link>
+        <Link to="/create" className="btn btn-success ml-auto">
           Add Country
-        </button>
-      </Link>
+        </Link>
+      </div>
+
       <table className="table table-striped-columns">
         <thead className="text-center">
           <tr>

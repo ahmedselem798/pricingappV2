@@ -16,7 +16,7 @@ function App() {
       <Route path='/countries' element = {<CountriesTable/>}/>
       <Route path='/create' element = {<CreateCountry/>}/>
       <Route path='/update/:id' element = {<UpdateCountry />}/>
-      <Route path='/reg' element = {<RegistrationForm/>}/>
+      <Route path='/register' element = {<RegistrationForm/>}/>
       <Route path='/' element = {<LoginForm/>}/>
       <Route path='/reset-password' element = {<ResetPassword/>}/>
 

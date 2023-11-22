@@ -1,5 +1,6 @@
+
 table {
-  margin-top: 4%;
+  margin-top: 8%;
   width: 100%;
 }
 
@@ -22,16 +23,49 @@ table {
 .btn.btn-success {
   background-color: #398965;
   border-color: #398965;
-  width: 100%;
+  width: 40%;
   height: 60px;
-  border-radius: 0;
+  border-radius: 7px;
   font-size: larger;
   font-weight: 600;
-  margin-top: -4%;
-  margin-left: 0;
+  margin-top: 10%;
+  margin-bottom: 4;
+  margin-left: 27%;
   margin-right: 0;
   position: fixed;
   z-index: 999;
+}
+
+.btn.btn-warning {
+  color: #398965;
+  background: none;
+  padding: 20px;
+  text-decoration: none;
+  border: none;
+  width: 20%;
+  text-align: left; 
+  position: fixed;
+}
+
+.btn.btn-warning:nth-child(1) {
+  margin-bottom: 1%; 
+  margin-top: 4%;
+  margin-left: 5%;
+  text-decoration: underline;
+}
+.btn.btn-warning:nth-child(2) {
+  margin-bottom: 1%; 
+  margin-top: 4%;
+  margin-left: 83%;
+  text-decoration: underline;
+} 
+
+.btn.btn-warning:hover{
+  color: #75b497;
+  background: none;
+  border: 0;
+  text-decoration: none;
+  
 }
 
 .btn.btn-success:hover {
