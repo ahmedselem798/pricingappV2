@@ -39,7 +39,7 @@ async function Users(app) {
     }
     if (await bcrypt.compare(password, user.password)) {
       const token = jwt.sign({ email: user.email }, JWT_SECRET, {
-        expiresIn: 5,
+        expiresIn: "1d",
       });
       if (res.status(201)) {
         console.log(token);
