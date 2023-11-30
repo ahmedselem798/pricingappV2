@@ -11,6 +11,8 @@ const CountriesTable = () => {
     column: "countryName",
     direction: "asc",
   });
+  const [userData,setUserData]= useState()
+
 
   useEffect(() => {
     axios
@@ -18,6 +20,29 @@ const CountriesTable = () => {
       .then((result) => setCountries(result.data))
       .catch((err) => console.log(err));
   }, []);
+
+  useEffect(()=>{
+    fetch("http://localhost:5000/home", {
+      method: "POST",
+      crossDomain: true,
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+      body: JSON.stringify({ token: window.localStorage.getItem("token") }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data, "userData");
+        setUserData({ userData: data.data });
+        if (data.data === "Token Expierd") {
+          alert("Token Expierd");
+          window.localStorage.clear();
+          window.location.href = "/";
+        }
+      });
+  },[])
 
   const handleDelete = (id) => {
     axios
@@ -39,6 +64,7 @@ const CountriesTable = () => {
     }));
   };
 
+
   const sortedCountries = [...countries].sort((a, b) => {
     const isDesc = sortOrder.direction === "desc" ? -1 : 1;
     const countryA = a[sortOrder.column].toLowerCase();
@@ -53,12 +79,19 @@ const CountriesTable = () => {
     return 0;
   });
 
+
+  const logout = () => {
+    window.localStorage.clear();
+    window.location.href = "/";
+  };
+  
+
   return (
     <div>
       <div className="d-flex mb-3">
-        <Link to="/" className="btn btn-warning mr-2">
-          Logout
-        </Link>
+      <button onClick={logout} type="submit" class="btn btn-warning mr-2">
+              logout
+            </button>
         <Link to="/register" className="btn btn-warning">
           Add User
         </Link>

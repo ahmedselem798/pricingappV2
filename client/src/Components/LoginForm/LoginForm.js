@@ -256,6 +256,7 @@ class LoginForm extends Component {
         console.log(data, "userRigester");
         if (data.status === "ok") {
           window.localStorage.setItem("token", data.data);
+          window.localStorage.setItem("loggedIn", true );
           window.location.href = "/countries";
         } else {
           // Set the error message state based on the error type
