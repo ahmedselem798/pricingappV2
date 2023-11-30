@@ -38,7 +38,9 @@ async function Users(app) {
       return res.json({ error: "User not exist" });
     }
     if (await bcrypt.compare(password, user.password)) {
-      const token = jwt.sign({ email: user.email }, JWT_SECRET);
+      const token = jwt.sign({ email: user.email }, JWT_SECRET, {
+        expiresIn: 5,
+      });
       if (res.status(201)) {
         console.log(token);
         return res.json({ status: "ok", data: token });
@@ -52,7 +54,15 @@ async function Users(app) {
   app.post("/home", async (req, res) => {
     const { token } = req.body;
     try {
-      const user = jwt.verify(token, JWT_SECRET);
+      const user = jwt.verify(token, JWT_SECRET, (err, res) => {
+        if (err) {
+          return "Token Expierd";
+        }
+        return res;
+      });
+      if (user == "Token Expierd") {
+        return res.json({ status: "error", data: "Token Expierd" });
+      }
       const userEmail = user.email;
       UsersModule.findOne({ email: userEmail })
         .then((data) => {
@@ -62,7 +72,7 @@ async function Users(app) {
           res.json({ status: "error", data: error });
         });
     } catch (error) {
-      res.json(error)
+      res.json(error);
     }
   });
 }
