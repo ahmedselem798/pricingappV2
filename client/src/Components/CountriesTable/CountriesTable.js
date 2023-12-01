@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./CountriesTable.css";
@@ -11,8 +10,7 @@ const CountriesTable = () => {
     column: "countryName",
     direction: "asc",
   });
-  const [userData,setUserData]= useState()
-
+  const [userData, setUserData] = useState();
 
   useEffect(() => {
     axios
@@ -21,7 +19,7 @@ const CountriesTable = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  useEffect(()=>{
+  useEffect(() => {
     fetch("http://localhost:5000/home", {
       method: "POST",
       crossDomain: true,
@@ -42,7 +40,7 @@ const CountriesTable = () => {
           window.location.href = "/";
         }
       });
-  },[])
+  }, []);
 
   const handleDelete = (id) => {
     axios
@@ -58,12 +56,12 @@ const CountriesTable = () => {
     setSortOrder((prevSortOrder) => ({
       column: "countryName",
       direction:
-        prevSortOrder.column === "countryName" && prevSortOrder.direction === "asc"
+        prevSortOrder.column === "countryName" &&
+        prevSortOrder.direction === "asc"
           ? "desc"
           : "asc",
     }));
   };
-
 
   const sortedCountries = [...countries].sort((a, b) => {
     const isDesc = sortOrder.direction === "desc" ? -1 : 1;
@@ -79,19 +77,17 @@ const CountriesTable = () => {
     return 0;
   });
 
-
   const logout = () => {
     window.localStorage.clear();
     window.location.href = "/";
   };
-  
 
   return (
     <div>
       <div className="d-flex mb-3">
-      <button onClick={logout} type="submit" class="btn btn-warning mr-2">
-              logout
-            </button>
+        <button onClick={logout} type="submit" class="btn btn-warning mr-2">
+          logout
+        </button>
         <Link to="/register" className="btn btn-warning">
           Add User
         </Link>
@@ -146,7 +142,8 @@ const CountriesTable = () => {
                   <div className="btn-container">
                     <button
                       onClick={(e) => handleDelete(country._id)}
-                      className="btn custom-btn btn-danger mr-2">
+                      className="btn custom-btn btn-danger mr-2"
+                    >
                       Delete
                     </button>
 
@@ -167,4 +164,3 @@ const CountriesTable = () => {
 };
 
 export default CountriesTable;
-
