@@ -27,7 +27,7 @@ const CountrySearch = () => {
 
   return (
     <div>
-      <div className="d-flex mb-3"></div>
+      {/* <div className="d-flex mb-3"></div> */}
       <input type="text" className="form-control" onChange={filter} />
       <table className="table table-striped-columns">
         <thead className="text-center">
