@@ -265,7 +265,7 @@ function CreateCountry() {
         </Row>
       </Container>
     </Container>
-  );
+  )
 }
 
 export default CreateCountry;
