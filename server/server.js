@@ -2,13 +2,13 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
-// const bcrypt = require("bcrypt");
-// const jwt = require("jsonwebtoken");
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 
-// const JWT_SECRET = "1234";
-// require("./model/UsersSchema");
+const JWT_SECRET = "1234";
+require("./model/UsersSchema");
 
-// const UsersModule = mongoose.model("UsersData");
+const UsersModule = mongoose.model("UsersData");
 
 const app = express();
 
@@ -17,7 +17,8 @@ const Users = require("./routes/UsersRoutes");
 
 app.use(cors());
 app.use(express.json());
-
+app.set("view engine", "ejs");
+app.use(express.urlencoded({extended:false}))
 mongoose
   .connect("mongodb://127.0.0.1:27017/PricingApp")
   .then(() => {
@@ -30,7 +31,7 @@ mongoose
 Countries(app);
 Users(app);
 
-
 app.listen(5000, () => {
   console.log("Server Running on port 5000.......");
 });
+

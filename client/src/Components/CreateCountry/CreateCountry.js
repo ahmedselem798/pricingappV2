@@ -23,7 +23,7 @@ function CreateCountry() {
   const [nb_iot, SetNB_IoT] = useState("");
 
   // Navigation
-  const Navigate = useNavigate()
+  const Navigate = useNavigate();
 
   // Submit Function
   const handleSubmit = async (e) => {
@@ -46,7 +46,7 @@ function CreateCountry() {
         nb_iot,
       });
       console.log(result.data);
-      Navigate('/')
+      Navigate("/");
     } catch (error) {
       console.log(error.response);
     }
