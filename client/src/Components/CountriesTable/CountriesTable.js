@@ -43,13 +43,16 @@ const CountriesTable = () => {
   }, []);
 
   const handleDelete = (id) => {
-    axios
-      .delete("http://localhost:5000/delete/" + id)
-      .then((resulte) => {
-        console.log(resulte);
-        window.location.reload();
-      })
-      .catch((err) => console.log(err));
+    const confirmDelete = window.confirm("Are you sure you want to delete?");
+    if (confirmDelete) {
+      axios
+        .delete("http://localhost:5000/delete/" + id)
+        .then((resulte) => {
+          console.log(resulte);
+          window.location.reload();
+        })
+        .catch((err) => console.log(err));
+    }
   };
 
   const handleSort = () => {
@@ -85,7 +88,7 @@ const CountriesTable = () => {
   return (
     <div>
       <div className="d-flex mb-3">
-        <button onClick={logout} type="submit" class="btn btn-warning mr-2">
+        <button onClick={logout} type="submit" className="btn btn-warning mr-2">
           logout
         </button>
         <Link to="/register" className="btn btn-warning">
@@ -100,7 +103,7 @@ const CountriesTable = () => {
         <thead className="text-center">
           <tr>
             <th onClick={handleSort} className="country-header">
-              Country
+              Country {sortOrder.direction === 'asc' ? '↑' : '↓'}
             </th>
             <th>Networks</th>
             <th>VPMN</th>
@@ -120,43 +123,40 @@ const CountriesTable = () => {
           </tr>
         </thead>
         <tbody className="text-center">
-          {sortedCountries.map((country) => {
-            return (
-              <tr key={country._id}>
-                <td>{country.countryName}</td>
-                <td>{country.network}</td>
-                <td>{country.vpmn}</td>
-                <td>{country.imsi}</td>
-                <td>{country.dataCostPerMB}</td>
-                <td>{country.dataCostPerMB * 1024}</td>
-                <td>{country.provider}</td>
-                <td>{country._2G}</td>
-                <td>{country._3G}</td>
-                <td>{country._4G}</td>
-                <td>{country._5G}</td>
-                <td>{country.lte}</td>
-                <td>{country.lte_m}</td>
-                <td>{country.nb_iot}</td>
-                <td>{country.note}</td>
-                <td>
-                  <div className="btn-container">
-                    <button
-                      onClick={(e) => handleDelete(country._id)}
-                      className="btn custom-btn btn-danger mr-2"
-                    >
-                      Delete
+          {sortedCountries.map((country) => (
+            <tr key={country._id}>
+              <td>{country.countryName}</td>
+              <td>{country.network}</td>
+              <td>{country.vpmn}</td>
+              <td>{country.imsi}</td>
+              <td>{country.dataCostPerMB}</td>
+              <td>{country.dataCostPerMB * 1024}</td>
+              <td>{country.provider}</td>
+              <td>{country._2G}</td>
+              <td>{country._3G}</td>
+              <td>{country._4G}</td>
+              <td>{country._5G}</td>
+              <td>{country.lte}</td>
+              <td>{country.lte_m}</td>
+              <td>{country.nb_iot}</td>
+              <td>{country.note}</td>
+              <td>
+                <div className="btn-container">
+                  <button
+                    onClick={() => handleDelete(country._id)}
+                    className="btn custom-btn btn-danger mr-2"
+                  >
+                    Delete
+                  </button>
+                  <Link to={`/update/${country._id}`}>
+                    <button type="button" className="btn btn-info">
+                      Edit
                     </button>
-
-                    <Link to={`/update/${country._id}`}>
-                      <button type="button" className="btn btn-info">
-                        Edit
-                      </button>
-                    </Link>
-                  </div>
-                </td>
-              </tr>
-            );
-          })}
+                  </Link>
+                </div>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>

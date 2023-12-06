@@ -111,12 +111,19 @@ function CreateCountry() {
                     />
                   </Col>
                   <Col>
-                    <Form.Label>Provider</Form.Label>
-                    <Form.Control
+                    <Form.Label>Provider</Form.Label><br/>
+                    {/* <Form.Control
                       type="text"
                       value={provider}
                       onChange={(e) => SetProvider(e.target.value)}
-                    />
+                    /> */}
+                    <select
+                      value={provider}
+                      onChange={(e) => SetProvider(e.target.value)}
+                    >
+                      <option value="" selected></option>
+                      <option value="PondMobile">PondMobile</option>
+                    </select>
                   </Col>
                 </Row>
               </Form.Group>
@@ -126,73 +133,116 @@ function CreateCountry() {
               <Row>
                 <Col md={6}>
                   <InputGroup className="mb-2">
-                    <Form.Control
+                    {/* <Form.Control
                       type="text"
                       placeholder="2G"
                       value={_2G}
                       onChange={(e) => Set2G(e.target.value)}
-                    />
+                    /> */}
+                    <select value={_2G} onChange={(e) => Set2G(e.target.value)}>
+                      <option value="" selected>
+                        2G
+                      </option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
                   </InputGroup>
                 </Col>
                 <Col md={6}>
                   <InputGroup className="mb-2">
-                    <Form.Control
-                      type="text"
-                      placeholder="3G"
-                      value={_3G}
-                      onChange={(e) => Set3G(e.target.value)}
-                    />
+                    <select value={_3G} onChange={(e) => Set3G(e.target.value)}>
+                      <option value="" selected>
+                        3G
+                      </option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
                   </InputGroup>
                 </Col>
                 <Col md={6}>
                   <InputGroup className="mb-2">
-                    <Form.Control
+                    {/* <Form.Control
                       type="text"
                       placeholder="4G"
                       value={_4G}
                       onChange={(e) => Set4G(e.target.value)}
-                    />
+                    /> */}
+                    <select value={_4G} onChange={(e) => Set4G(e.target.value)}>
+                      <option value="" selected>
+                        4G
+                      </option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
                   </InputGroup>
                 </Col>
 
                 <Col md={6}>
                   <InputGroup className="mb-2">
-                    <Form.Control
+                    {/* <Form.Control
                       type="text"
                       placeholder="5G"
                       value={_5G}
                       onChange={(e) => Set5G(e.target.value)}
-                    />
+                    /> */}
+                    <select value={_5G} onChange={(e) => Set5G(e.target.value)}>
+                      <option value="" selected>
+                        5G
+                      </option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
                   </InputGroup>
                 </Col>
                 <Col md={6}>
                   <InputGroup className="mb-2">
-                    <Form.Control
+                    {/* <Form.Control
                       type="text"
                       placeholder="LTE"
                       value={lte}
                       onChange={(e) => SetLTE(e.target.value)}
-                    />
+                    /> */}
+                    <select value={lte} onChange={(e) => SetLTE(e.target.value)}>
+                      <option value="" selected>
+                        LTE
+                      </option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
                   </InputGroup>
                 </Col>
                 <Col md={6}>
                   <InputGroup className="mb-2">
-                    <Form.Control
+                    {/* <Form.Control
                       type="text"
                       placeholder="LTE-M"
                       value={lte_m}
                       onChange={(e) => SetLTE_M(e.target.value)}
-                    />
+                    /> */}
+                    <select value={lte_m} onChange={(e) => SetLTE_M(e.target.value)}>
+                      <option value="" selected>
+                        LTE-M
+                      </option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
                   </InputGroup>
                 </Col>
                 <Col md={6}>
                   <InputGroup className="mb-2">
-                    <Form.Control
+                    {/* <Form.Control
                       type="text"
                       placeholder="NB_IoT"
                       value={nb_iot}
                       onChange={(e) => SetNB_IoT(e.target.value)}
-                    />
+                    /> */}
+                    <select value={nb_iot} onChange={(e) => SetNB_IoT(e.target.value)}>
+                      <option value="" selected>
+                        NB-IOT
+                      </option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
                   </InputGroup>
                 </Col>
               </Row>
@@ -215,7 +265,7 @@ function CreateCountry() {
         </Row>
       </Container>
     </Container>
-  );
+  )
 }
 
 export default CreateCountry;
