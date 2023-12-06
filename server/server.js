@@ -1,6 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const nodemailer = require('nodemailer');
+
 
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
@@ -34,4 +36,3 @@ Users(app);
 app.listen(5000, () => {
   console.log("Server Running on port 5000.......");
 });
-
