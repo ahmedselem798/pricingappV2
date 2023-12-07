@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const nodemailer = require('nodemailer');
 
 const JWT_SECRET = "1234";
 
@@ -75,7 +76,6 @@ async function Users(app) {
       res.json(error);
     }
   });
-
   app.post("/forget-password", async (req, res) => {
     const { email } = req.body;
     try {
@@ -88,6 +88,29 @@ async function Users(app) {
         expiresIn: "5m",
       });
       const link = `http://localhost:5000/reset-password/${oldUser._id}/${token}`;
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: 'deplofy.test.152023@gmail.com',
+          pass: 'dzvajyumexlblstd'
+        }
+      });
+      
+      const mailOptions = {
+        from: 'deplofy.test.152023@gmail.com',
+        to: email,
+        subject: 'Password Reset',
+        text: `Hello ${oldUser.firstName} ${oldUser.lastName} Please follow the link to reset your Password 
+        ${link}`
+      };
+      
+      transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+          console.log(error);
+        } else {
+          console.log('Email sent: ' + info.response);
+        }
+      });
       console.log(link);
     } catch (error) {}
   });
@@ -129,6 +152,7 @@ async function Users(app) {
       res.json({status:"somthing wnt wrong"});
     }
   });
+  
 }
 
 module.exports = Users;
