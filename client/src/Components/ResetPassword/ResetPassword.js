@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./ResetPassword.css";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import formbg4 from "../../images/formbg4.jpg";
-import { LockFill, ArrowRepeat } from "react-bootstrap-icons";
+import { LockFill, Envelope, ArrowRepeat } from "react-bootstrap-icons";
 
 class ResetPassword extends Component {
   constructor(props) {
@@ -43,7 +43,7 @@ class ResetPassword extends Component {
             <Col md={6}>
               <Form onSubmit={this.handleSubmit}>
                 <Form.Group className="mb-3 form-group-spacing d-flex">
-                  <LockFill size={20} className="form-icon" />
+                  <Envelope size={20} className="form-icon" />
                   <Form.Control
                     type="email"
                     placeholder="Enter your E-mail"

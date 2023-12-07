@@ -112,35 +112,33 @@ function CreateCountry() {
                   </Col>
                   <Col>
                     <Form.Label>Provider</Form.Label><br/>
-                    {/* <Form.Control
-                      type="text"
-                      value={provider}
-                      onChange={(e) => SetProvider(e.target.value)}
-                    /> */}
                     <select
                       value={provider}
                       onChange={(e) => SetProvider(e.target.value)}
+                      className="custom-select-provider"
                     >
-                      <option value="" selected></option>
+                      <option value="" disabled>
+                        Select Provider
+                      </option>
+                      <option value="FlowLive">FlowLive</option>
                       <option value="PondMobile">PondMobile</option>
                     </select>
+
                   </Col>
                 </Row>
               </Form.Group>
 
-              <h2 className="h1">Technologies</h2>
+              {/* <h2 className="h1">Technologies</h2>
 
               <Row>
                 <Col md={6}>
-                  <InputGroup className="mb-2">
-                    {/* <Form.Control
-                      type="text"
-                      placeholder="2G"
+                <InputGroup className="mb-2">
+                    <select
                       value={_2G}
                       onChange={(e) => Set2G(e.target.value)}
-                    /> */}
-                    <select value={_2G} onChange={(e) => Set2G(e.target.value)}>
-                      <option value="" selected>
+                      className="custom-select"
+                    >
+                      <option value="" disabled>
                         2G
                       </option>
                       <option value="Yes">Yes</option>
@@ -149,9 +147,13 @@ function CreateCountry() {
                   </InputGroup>
                 </Col>
                 <Col md={6}>
-                  <InputGroup className="mb-2">
-                    <select value={_3G} onChange={(e) => Set3G(e.target.value)}>
-                      <option value="" selected>
+                <InputGroup className="mb-2">
+                    <select
+                      value={_3G}
+                      onChange={(e) => Set3G(e.target.value)}
+                      className="custom-select"
+                    >
+                      <option value="" disabled>
                         3G
                       </option>
                       <option value="Yes">Yes</option>
@@ -160,15 +162,13 @@ function CreateCountry() {
                   </InputGroup>
                 </Col>
                 <Col md={6}>
-                  <InputGroup className="mb-2">
-                    {/* <Form.Control
-                      type="text"
-                      placeholder="4G"
+                <InputGroup className="mb-2">
+                    <select
                       value={_4G}
                       onChange={(e) => Set4G(e.target.value)}
-                    /> */}
-                    <select value={_4G} onChange={(e) => Set4G(e.target.value)}>
-                      <option value="" selected>
+                      className="custom-select"
+                    >
+                      <option value="" disabled>
                         4G
                       </option>
                       <option value="Yes">Yes</option>
@@ -178,15 +178,13 @@ function CreateCountry() {
                 </Col>
 
                 <Col md={6}>
-                  <InputGroup className="mb-2">
-                    {/* <Form.Control
-                      type="text"
-                      placeholder="5G"
+                <InputGroup className="mb-2">
+                    <select
                       value={_5G}
                       onChange={(e) => Set5G(e.target.value)}
-                    /> */}
-                    <select value={_5G} onChange={(e) => Set5G(e.target.value)}>
-                      <option value="" selected>
+                      className="custom-select"
+                    >
+                      <option value="" disabled>
                         5G
                       </option>
                       <option value="Yes">Yes</option>
@@ -195,15 +193,13 @@ function CreateCountry() {
                   </InputGroup>
                 </Col>
                 <Col md={6}>
-                  <InputGroup className="mb-2">
-                    {/* <Form.Control
-                      type="text"
-                      placeholder="LTE"
+                <InputGroup className="mb-2">
+                    <select
                       value={lte}
                       onChange={(e) => SetLTE(e.target.value)}
-                    /> */}
-                    <select value={lte} onChange={(e) => SetLTE(e.target.value)}>
-                      <option value="" selected>
+                      className="custom-select"
+                    >
+                      <option value="" disabled>
                         LTE
                       </option>
                       <option value="Yes">Yes</option>
@@ -212,16 +208,14 @@ function CreateCountry() {
                   </InputGroup>
                 </Col>
                 <Col md={6}>
-                  <InputGroup className="mb-2">
-                    {/* <Form.Control
-                      type="text"
-                      placeholder="LTE-M"
+                <InputGroup className="mb-2">
+                    <select
                       value={lte_m}
                       onChange={(e) => SetLTE_M(e.target.value)}
-                    /> */}
-                    <select value={lte_m} onChange={(e) => SetLTE_M(e.target.value)}>
-                      <option value="" selected>
-                        LTE-M
+                      className="custom-select"
+                    >
+                      <option value="" disabled>
+                        LTE-M                      
                       </option>
                       <option value="Yes">Yes</option>
                       <option value="No">No</option>
@@ -229,15 +223,13 @@ function CreateCountry() {
                   </InputGroup>
                 </Col>
                 <Col md={6}>
-                  <InputGroup className="mb-2">
-                    {/* <Form.Control
-                      type="text"
-                      placeholder="NB_IoT"
+                <InputGroup className="mb-2 custom-nbiot-input-group">
+                    <select
                       value={nb_iot}
                       onChange={(e) => SetNB_IoT(e.target.value)}
-                    /> */}
-                    <select value={nb_iot} onChange={(e) => SetNB_IoT(e.target.value)}>
-                      <option value="" selected>
+                      className="custom-select"
+                    >
+                      <option value="" disabled>
                         NB-IOT
                       </option>
                       <option value="Yes">Yes</option>
@@ -245,7 +237,226 @@ function CreateCountry() {
                     </select>
                   </InputGroup>
                 </Col>
-              </Row>
+              </Row> */}
+
+<h2 className="h1">Technologies</h2>
+
+<Row>
+  <Col md={4}>
+    <InputGroup className="mb-2">
+      <select
+        value={_2G}
+        onChange={(e) => Set2G(e.target.value)}
+        className="custom-select"
+      >
+        <option value="" disabled>
+          2G
+        </option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </InputGroup>
+  </Col>
+  <Col md={4}>
+    <InputGroup className="mb-2">
+      <select
+        value={_3G}
+        onChange={(e) => Set3G(e.target.value)}
+        className="custom-select"
+      >
+        <option value="" disabled>
+          3G
+        </option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </InputGroup>
+  </Col>
+  <Col md={4}>
+    <InputGroup className="mb-2">
+      <select
+        value={_4G}
+        onChange={(e) => Set4G(e.target.value)}
+        className="custom-select"
+      >
+        <option value="" disabled>
+          4G
+        </option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </InputGroup>
+  </Col>
+</Row>
+
+<Row>
+  <Col md={4}>
+    <InputGroup className="mb-2">
+      <select
+        value={_5G}
+        onChange={(e) => Set5G(e.target.value)}
+        className="custom-select"
+      >
+        <option value="" disabled>
+          5G
+        </option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </InputGroup>
+  </Col>
+  <Col md={4}>
+    <InputGroup className="mb-2">
+      <select
+        value={lte}
+        onChange={(e) => SetLTE(e.target.value)}
+        className="custom-select"
+      >
+        <option value="" disabled>
+          LTE
+        </option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </InputGroup>
+  </Col>
+  <Col md={4}>
+    <InputGroup className="mb-2">
+      <select
+        value={lte_m}
+        onChange={(e) => SetLTE_M(e.target.value)}
+        className="custom-select"
+      >
+        <option value="" disabled>
+          LTE-M
+        </option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </InputGroup>
+  </Col>
+</Row>
+
+<Row>
+  <Col md={4}>
+    <InputGroup className="mb-2 custom-nbiot-input-group">
+      <select
+        value={nb_iot}
+        onChange={(e) => SetNB_IoT(e.target.value)}
+        className="custom-select"
+      >
+        <option value="" disabled>
+          NB-IOT
+        </option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </InputGroup>
+  </Col>
+</Row>
+
+
+              {/* <h2 className="h1">Technologies</h2>
+
+              <Row>
+                <Col md={2}>
+                  <select
+                    value={_2G}
+                    onChange={(e) => Set2G(e.target.value)}
+                    className="custom-select mb-2"
+                  >
+                    <option value="" disabled>
+                      2G
+                    </option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </Col>
+
+                <Col md={2}>
+                  <select
+                    value={_3G}
+                    onChange={(e) => Set3G(e.target.value)}
+                    className="custom-select mb-2"
+                  >
+                    <option value="" disabled>
+                      3G
+                    </option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </Col>
+
+                <Col md={2}>
+                  <select
+                    value={_4G}
+                    onChange={(e) => Set4G(e.target.value)}
+                    className="custom-select mb-2"
+                  >
+                    <option value="" disabled>
+                      4G
+                    </option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </Col>
+
+                <Col md={2}>
+                  <select
+                    value={_5G}
+                    onChange={(e) => Set5G(e.target.value)}
+                    className="custom-select mb-2"
+                  >
+                    <option value="" disabled>
+                      5G
+                    </option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </Col>
+
+                <Col md={2}>
+                  <select
+                    value={lte}
+                    onChange={(e) => SetLTE(e.target.value)}
+                    className="custom-select mb-2"
+                  >
+                    <option value="" disabled>
+                      LTE
+                    </option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </Col>
+
+                <Col md={2}>
+                  <select
+                    value={lte_m}
+                    onChange={(e) => SetLTE_M(e.target.value)}
+                    className="custom-select mb-2"
+                  >
+                    <option value="" disabled>
+                      LTE-M
+                    </option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </Col>
+
+                <Col md={2} className="custom-nbiot-input-group">
+                  <select
+                    value={nb_iot}
+                    onChange={(e) => SetNB_IoT(e.target.value)}
+                    className="custom-select mb-2"
+                  >
+                    <option value="" disabled>
+                      NB-IOT
+                    </option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </Col>
+              </Row> */}
 
               <Col>
                 <Form.Label className="notes">Notes</Form.Label>

@@ -45,6 +45,7 @@ table {
   width: 20%;
   text-align: left; 
   position: fixed;
+  z-index: 999;
 }
 
 .btn.btn-warning:nth-child(1) {
@@ -59,6 +60,7 @@ table {
   margin-left: 83%;
   text-decoration: underline;
 } 
+
 
 .btn.btn-warning:hover{
   color: #75b497;

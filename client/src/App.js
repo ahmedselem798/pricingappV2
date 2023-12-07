@@ -8,6 +8,8 @@ import RegistrationForm from "./Components/RegistrationForm/RegistrationForm";
 import LoginForm from "./Components/LoginForm/LoginForm";
 import ResetPassword from "./Components/ResetPassword/ResetPassword";
 import CountrySearch from "./Components/countrySearch/countrySearch";
+import PricingForm from "./Components/PricingForm/PricingForm";
+
 
 function App() {
   const isLoggedIn = window.localStorage.getItem("loggedIn");
@@ -26,6 +28,7 @@ function App() {
           <Route path="/register" element={<RegistrationForm />} />
           <Route path="/search" element={<CountrySearch />} />
           <Route path="/reset-password" element={<ResetPassword />} />
+          <Route path="/price" element={<PricingForm />} />
         </Routes>
       </BrowserRouter>
     </div>
