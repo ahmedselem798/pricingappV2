@@ -3,6 +3,7 @@
     margin: auto;
     margin-top: 10px; 
     margin-bottom: 15px;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.8);
   }
 
   /* .container-background {
@@ -47,33 +48,9 @@
     margin-bottom: 10px;
   }
   
-  .checkbox-label {
-    margin-left: 10px;
+  .btn-primary{
+    margin-top: 10%;
+    margin-left: 75%;
+    margin-bottom: -5%;
   }
-  
-  .checkbox-options {
-    margin-left: 20px;
-  }
-  
-  .checkbox-options select {
-    margin-top: 5px;
-  }
-  
-  .radio-group {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .radio-label {
-    margin-right: 10px;
-  }
-  
-  .checkbox-options {
-    margin-left: 20px;
-  }
-  
-  .checkbox-options select {
-    margin-top: 5px;
-  }
-  
-  
+ 
