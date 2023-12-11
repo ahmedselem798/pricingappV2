@@ -1,4 +1,4 @@
-
+/* 
 .registration-form-bg {
   background-color: #aed6c4;
 }
@@ -33,7 +33,7 @@
   cursor: pointer;
   margin-left: 5%;
   margin-top: 2px; 
-  width: 70%;
+  width: 90%;
   height: 47px;
 }
 
@@ -53,4 +53,27 @@
   padding: 12px 15px;
   margin-top: -7px;
   margin-left: -30px; 
+} */
+
+
+.container-md {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.btn-primary {
+  background-color: rgb(237, 82, 34);
+  border-color: #cb854f;
+  font-size: large;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #eea66f;
+  border-color: #eea66f;
 }

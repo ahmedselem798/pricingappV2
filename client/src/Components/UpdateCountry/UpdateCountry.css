@@ -9,7 +9,7 @@
   opacity: 0.8;
 }
 
-.container{
+.container-lg{
   background: linear-gradient(to bottom, #c5e4d6, #72a58e);
   padding: 30px;
   border-radius: 10px;
@@ -45,13 +45,55 @@
     cursor: pointer;
   }
 
-  .form-control:focus {
+.form-control:focus {
       border-color: #0f482e; 
   } 
-  .form-control:hover {
+
+.form-control:hover {
     border-color: #297553; 
     opacity: 0.7;
 } 
+
+.centered-input-group {
+  display: flex;
+  justify-content: center;
+}
+
+.custom-select-provider {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 1px; 
+  border-color: #e1f4e7;
+  background-color: #fff;
+  width: 100%; 
+  margin-top: 3%;
+  margin-left: 2%;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.custom-select {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  background-color: #fff;
+  width: 94%;
+  height: -3cm;
+  margin-bottom: 3px;
+  margin-left: 8px;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.custom-select:hover{
+  border-color: #297553; 
+}
+
+.custom-nbiot-input-group {
+  margin-top: 15px;
+  /* width: 338%; */
+}
 
   .h1{
     margin-left: 0.5%;
@@ -66,15 +108,18 @@
   .notes{
     font-size: larger;
     font-weight: 700;
+    margin-top: 30px;
   }
 
-  .btn {
+  .btn.btn-dark {
     color: #fff;
-    height: 40px;
+    height: 45px;
     width: 35%;
     margin-top: 4.5%;
+    margin-bottom: 0.5%;
     margin-left: 33%;
     background-color: rgb(237, 82, 34);
+    border-color: rgb(237, 82, 34);
     font-size: large;
     align-self: center;
     cursor: pointer;
@@ -85,5 +130,5 @@
     background-color: #eea66f;
     border-color: #eea66f;
 }
-  
+
 

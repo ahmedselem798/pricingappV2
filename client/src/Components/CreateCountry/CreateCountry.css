@@ -45,10 +45,11 @@
     cursor: pointer;
   }
 
-  .form-control:focus {
+.form-control:focus {
       border-color: #0f482e; 
   } 
-  .form-control:hover {
+
+.form-control:hover {
     border-color: #297553; 
     opacity: 0.7;
 } 
@@ -65,6 +66,7 @@
   border-color: #e1f4e7;
   background-color: #fff;
   width: 100%; 
+  margin-top: 3%;
   margin-left: 2%;
   opacity: 0.9;
   cursor: pointer;
@@ -84,9 +86,13 @@
   cursor: pointer;
 }
 
+.custom-select:hover{
+  border-color: #297553; 
+}
+
 .custom-nbiot-input-group {
   margin-top: 15px;
-  width: 338%;
+  /* width: 338%; */
 }
 
   .h1{
@@ -110,6 +116,7 @@
     height: 45px;
     width: 35%;
     margin-top: 4.5%;
+    margin-bottom: 0.5%;
     margin-left: 33%;
     background-color: rgb(237, 82, 34);
     border-color: rgb(237, 82, 34);
@@ -124,23 +131,4 @@
     border-color: #eea66f;
 }
 
-.scroll-container {
-  overflow-x: hidden;
-}
-
-.scroll-container::-webkit-scrollbar {
-  height: 12px;
-}
-
-.scroll-container::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 6px;
-}
-
-.scroll-container::-webkit-scrollbar-track {
-  background-color: #eee;
-  border-radius: 6px;
-}
-
-  
 
