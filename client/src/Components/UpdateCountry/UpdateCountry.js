@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
-import "./CreateCountry.css";
+import "./UpdateCountry.css";
 import { Form, Container, Row, Col, Button, InputGroup } from "react-bootstrap";
 
 function UpdateCountry() {

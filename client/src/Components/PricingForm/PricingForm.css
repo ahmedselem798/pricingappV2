@@ -1,9 +1,13 @@
 .container {
+    border-radius: 10px;
     max-width: 550px;
     margin: auto;
     margin-top: 10px; 
     margin-bottom: 15px;
+    background-color: #aed6c4;
     box-shadow: 0 5px 9px rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    padding-left: 3%;
   }
 
   /* .container-background {
@@ -50,7 +54,7 @@
   
   .btn-primary{
     margin-top: 10%;
-    /* margin-left: 75%; */
+    margin-left: 2%;
     margin-bottom: -5%;
   }
  

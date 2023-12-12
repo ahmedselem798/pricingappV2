@@ -63,6 +63,8 @@
   display: flex;
   flex-direction: column;
   margin-top: 40px;
+  margin-left: 1%;
+  background-color: #aed6c4;
 }
 
 .btn-primary {
@@ -71,6 +73,7 @@
   font-size: large;
   color: white;
   cursor: pointer;
+  margin-left: 32%;
 }
 
 .btn-primary:hover {
