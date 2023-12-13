@@ -94,7 +94,7 @@ const CountriesTable = () => {
         <Link to="/register" className="btn btn-warning">
           Add User
         </Link>
-        <Link to="/create" className="btn btn-success ml-auto">
+        <Link to="/create" className="btn100">
           Add Country
         </Link>
       </div>

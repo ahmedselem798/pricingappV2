@@ -9,18 +9,15 @@ table {
 }
 
 .table-striped-columns th:first-child{
-  position: sticky;
   left: 0;
-  z-index: 2;
+ 
 }
 
 .table-striped-columns td:first-child{
-  position: sticky;
-  left: 0;
-  z-index: 2;
+  left: 0; 
 }
 
-.btn.btn-success {
+/* .btn.btn-success {
   background-color: #398965;
   border-color: #398965;
   width: 40%;
@@ -34,8 +31,25 @@ table {
   margin-right: 0;
   position: fixed;
   z-index: 999;
-}
+} */
 
+.btn100{
+  background-color: #398965;
+  border-color: #398965;
+  width: 20%;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  height: 60px;
+  border-radius: 7px;
+  font-size: larger;
+  margin-top: 50px;
+  padding-top: 1%;
+  margin-left: 38%;
+  margin-right: 0;
+  
+}
 .btn.btn-warning {
   color: #398965;
   background: none;
@@ -44,8 +58,7 @@ table {
   border: none;
   width: 20%;
   text-align: left; 
-  position: fixed;
-  z-index: 999;
+  
 }
 
 .btn.btn-warning:nth-child(1) {

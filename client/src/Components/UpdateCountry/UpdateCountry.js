@@ -1,10 +1,14 @@
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import React, { useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import "./UpdateCountry.css";
 import { Form, Container, Row, Col, Button, InputGroup } from "react-bootstrap";
 
 function UpdateCountry() {
+  const { id } = useParams();  
+  const Navigate = useNavigate();
+
+
   const [countryName, SetCountryName] = useState();
   const [network, SetNetwork] = useState();
   const [vpmn, SetVPMN] = useState();
@@ -22,14 +26,31 @@ function UpdateCountry() {
   const [lte_m, SetLTE_M] = useState("");
   const [nb_iot, SetNB_IoT] = useState("");
 
-  // Navigation
-  const Navigate = useNavigate();
+useEffect(()=>{
+  axios.get("http://localhost:5000/getCountry/" + id).then((result)=>{
+    console.log(result)
+    SetCountryName(result.data.countryName)
+    SetNetwork(result.data.network)
+    SetVPMN(result.data.vpmn)
+    SetIMSI(result.data.imsi)
+    SetProvider(result.data.provider)
+    SetDataCost(result.data.dataCostPerMB)
+    SetNote(result.data.note)
+    Set2G(result.data._2G)
+    Set3G(result.data._3G)
+    Set4G(result.data._4G)
+    Set5G(result.data._5G)
+    SetLTE(result.data.lte)
+    SetLTE_M(result.data.lte_m)
+    SetNB_IoT(result.data.nb_iot)
+  })
+},[])
 
   // Submit Function
-  const handleSubmit = async (e) => {
+  const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      const result = await axios.post("http://localhost:5000/create", {
+      const result = await axios.put("http://localhost:5000/update/" + id, {
         countryName,
         network,
         imsi,
@@ -57,7 +78,7 @@ function UpdateCountry() {
       <Container className="container-lg">
         <Row>
           <Col>
-            <Form onSubmit={handleSubmit}>
+            <Form onSubmit={handleUpdate}>
               <Form.Group>
                 <Row>
                   <Col>
