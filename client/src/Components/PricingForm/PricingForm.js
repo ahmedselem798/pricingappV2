@@ -156,6 +156,8 @@ const PricingForm = () => {
               <option value={0}>0</option>
               <option value={0.25}>0.25</option>
               <option value={0.35}>0.35</option>
+              <option value={0.50}>0.50</option>
+              <option value={0.60}>0.60</option>
             </select>
           </div>
           <div className="mb-3">
@@ -257,7 +259,7 @@ const PricingForm = () => {
                 onChange={handlePaymentMethodChange}
               />
               <label className="form-check-label" htmlFor="cash">
-                Cash
+                Wire Transfer
               </label>
             </div>
             <div className="form-check">

@@ -90,7 +90,7 @@ function CreateCountry() {
                     />
                   </Col>
                   <Col>
-                    <Form.Label>Data Cost</Form.Label>
+                    <Form.Label>Data Cost/MB</Form.Label>
                     <Form.Control
                       type="text"
                       value={dataCostPerMB}
