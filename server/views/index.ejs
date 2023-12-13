@@ -4,24 +4,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Reset Password</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <script>
     var status = '<%- JSON.stringify(status)%>'
-    if(JSON.parse(status)=="verfied"){
-      window.location.href="http://localhost:3000/"
-      // if(confirm("Do you want to Login")){
-      //   window.location.href="http://localhost:3000/"
-      // }
+    if (JSON.parse(status) == "verfied") {
+      window.location.href = "http://localhost:3000/"
     }
   </script>
+  <style>
+    .card {
+      margin: 30%;
+      margin-top: 15%;
+      background-color: aquamarine;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      padding-top: 100px;
+      border-radius: 30px;
+      font-size: large;
+    }
+
+    .card-header {
+      text-align: center;
+    }
+    .btn.btn-success{
+      background-color: rgb(237, 82, 34);
+    border-color: #cb854f;
+    font-size: large;
+    color: white;
+    cursor: pointer;
+    margin-left: 6%;
+    margin-top: 2px; 
+    width: 90%;
+    height: 47px;
+    }
+    .btn.btn-success:hover{
+      background-color: #eea66f;
+    border-color: #eea66f
+    }
+  </style>
 </head>
 
 <body>
   <form action="" method="post">
-    <input type="password" name="password" id="password" placeholder="New Password">
-    <be />
-    <input type="submit" value="submit">
+    <div class="card border-secondary mb-3">
+      <div class="card-header">Please Enter Your New Password</div>
+      <div class="card-body text-secondary">
+        <input class="form-control" type="password" name="password" id="password" placeholder="New Password">
+        <br />
+        <input class="btn btn-success" type="submit" value="Confirm">
+      </div>
   </form>
+
 </body>
 
 </html>
