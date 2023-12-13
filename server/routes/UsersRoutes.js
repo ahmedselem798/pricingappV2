@@ -3,7 +3,6 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const nodemailer = require("nodemailer");
 
-const JWT_SECRET = "1234";
 
 require("../model/UsersSchema");
 
@@ -39,7 +38,7 @@ async function Users(app) {
       return res.json({ error: "User not exist" });
     }
     if (await bcrypt.compare(password, user.password)) {
-      const token = jwt.sign({ email: user.email }, JWT_SECRET, {
+      const token = jwt.sign({ email: user.email }, process.env.JWT_SECRET, {
         expiresIn: "1d",
       });
       if (res.status(201)) {
@@ -55,7 +54,7 @@ async function Users(app) {
   app.post("/home", async (req, res) => {
     const { token } = req.body;
     try {
-      const user = jwt.verify(token, JWT_SECRET, (err, res) => {
+      const user = jwt.verify(token, process.env.JWT_SECRET, (err, res) => {
         if (err) {
           return "Token Expierd";
         }
@@ -83,7 +82,7 @@ async function Users(app) {
       if (!oldUser) {
         return res.json({ status: "User not Exist!!" });
       }
-      const secret = JWT_SECRET + oldUser.password;
+      const secret = process.env.JWT_SECRET + oldUser.password;
       const token = jwt.sign(
         { email: oldUser.email, id: oldUser._id },
         secret,
@@ -129,7 +128,7 @@ async function Users(app) {
     if (!oldUser) {
       return res.json({ status: "User not Exist!!" });
     }
-    const secret = JWT_SECRET + oldUser.password;
+    const secret = process.env.JWT_SECRET + oldUser.password;
     try {
       const verfiy = jwt.verify(token, secret);
       // res.send("verfied")
@@ -145,7 +144,7 @@ async function Users(app) {
     if (!oldUser) {
       return res.json({ status: "User not Exist!!!" });
     }
-    const secret = JWT_SECRET + oldUser.password;
+    const secret = process.env.JWT_SECRET + oldUser.password;
     try {
       const verfiy = jwt.verify(token, secret);
       const encryptedPassword = await bcrypt.hash(password, 10);
