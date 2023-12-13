@@ -100,7 +100,7 @@ const CountriesTable = () => {
         </Link>
         <div className="search ml-3">
             <p className="searchtext">Search Country</p>
-            <Link to="/update/:id">
+            <Link to="/search">
             <FaSearch className="search-icon" size={30} color="#555" />
             </Link>
           </div>

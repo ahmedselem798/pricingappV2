@@ -21,6 +21,7 @@ const PricingForm = () => {
       setConvertedValue(`${converted} MB`);
       setNumberOfGB(converted);
       setNumberOfMB(0);
+      setTotal(0);
     } else {
       setConvertedValue("");
       setNumberOfGB(0);
@@ -80,7 +81,7 @@ const PricingForm = () => {
       ProfitWithSIMs +
       parseFloat(creditTransactionFees);
 
-    setTotal(totalProfit);
+    setTotal(totalProfit.toFixed(2));
   };
 
   return (
@@ -96,7 +97,8 @@ const PricingForm = () => {
               className="form-control"
               id="costPerMB"
               value={cost}
-              onChange={(e) => setCost(e.target.value)}
+              onChange={() => setTotal(0)}
+              onInput={(e) => setCost(e.target.value)}
             />
           </div>
           <div className="mb-3">
@@ -138,7 +140,7 @@ const PricingForm = () => {
                 className="form-control"
                 id="convertedValue"
                 value={convertedValue}
-                onChange={(e) => setNumberOfGB(e.target.value)}
+                onInput={(e) => setNumberOfGB(e.target.value)}
                 readOnly
               />
             )}
@@ -151,13 +153,14 @@ const PricingForm = () => {
               className="form-select"
               id="laf"
               value={accessLineFee}
-              onChange={(e) => setAccessLineFee(e.target.value)}
+              onInput={(e) => setAccessLineFee(e.target.value)}
+              onChange={() => setTotal(0)}
             >
               <option value={0}>0</option>
               <option value={0.25}>0.25</option>
               <option value={0.35}>0.35</option>
-              <option value={0.50}>0.50</option>
-              <option value={0.60}>0.60</option>
+              <option value={0.5}>0.50</option>
+              <option value={0.6}>0.60</option>
             </select>
           </div>
           <div className="mb-3">
@@ -169,7 +172,8 @@ const PricingForm = () => {
               className="form-control"
               id="quantityOfSIMs"
               value={numberOfSIMs}
-              onChange={(e) => setNumberOfSIMs(e.target.value)}
+              onInput={(e) => setNumberOfSIMs(e.target.value)}
+              onChange={() => setTotal(0)}
             />
           </div>
 
@@ -181,7 +185,8 @@ const PricingForm = () => {
               className="form-select"
               id="ur"
               value={utilizationRate}
-              onChange={(e) => setUtilizationRate(e.target.value)}
+              onInput={(e) => setUtilizationRate(e.target.value)}
+              onChange={() => setTotal(0)}
             >
               <option value={100}>100%</option>
               <option value={90}>90%</option>
@@ -200,7 +205,8 @@ const PricingForm = () => {
               className="form-select"
               id="ur"
               value={markUpPrice}
-              onChange={(e) => setMarkUpPrice(e.target.value)}
+              onInput={(e) => setMarkUpPrice(e.target.value)}
+              onChange={()=>setTotal(0)}
             >
               <option value={5.26}>5%</option>
               <option value={11.11}>10%</option>
@@ -294,8 +300,10 @@ const PricingForm = () => {
                     className="form-select"
                     id="creditCardFeesOptions"
                     value={creditCardFee}
-                    onChange={(e) => setCreditCardFee(e.target.value)}
+                    onChange={() => setTotal(0)}
+                    onInput={(e) => setCreditCardFee(e.target.value)}
                   >
+                    <option value={0}>0</option>
                     <option value={3}>3%</option>
                     <option value={3.5}>3.5%</option>
                     <option value={4}>4%</option>
@@ -321,8 +329,10 @@ const PricingForm = () => {
                     className="form-select"
                     id="creditTransactionFeesOptions"
                     value={creditTransactionFees}
-                    onChange={(e) => setCreditTransactionFees(e.target.value)}
+                    onChange={() => setTotal(0)}
+                    onInput={(e) => setCreditTransactionFees(e.target.value)}
                   >
+                    <option value={0}>0</option>
                     <option value={0.3}>0.30</option>
                     <option value={0.4}>0.40</option>
                     <option value={0.5}>0.50</option>

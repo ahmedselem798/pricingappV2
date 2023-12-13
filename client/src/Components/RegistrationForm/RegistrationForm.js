@@ -21,7 +21,7 @@ class RegistrationForm extends Component {
       phoneNumber: "",
       password: "",
     };
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);  
   }
   handleSubmit(e) {
     e.preventDefault();
@@ -47,6 +47,7 @@ class RegistrationForm extends Component {
       .then((data) => {
         console.log(data, "userRigester");
       });
+      window.location.href = "/countries"
   }
   render() {
     return (
