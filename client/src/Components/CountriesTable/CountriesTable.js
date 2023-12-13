@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./CountriesTable.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { FaSearch } from "react-icons/fa"; 
 
 const CountriesTable = () => {
   const [countries, setCountries] = useState([]);
@@ -88,15 +89,21 @@ const CountriesTable = () => {
   return (
     <div>
       <div className="d-flex mb-3">
-        <button onClick={logout} type="submit" className="btn btn-warning mr-2">
-          logout
+        <button onClick={logout} type="submit" className="btn100-warning">
+          Logout
         </button>
-        <Link to="/register" className="btn btn-warning">
+        <Link to="/register" className="btn100-warning2">
           Add User
         </Link>
         <Link to="/create" className="btn100">
-          Add Country
+         <p className="btn100-txt"> Add Country</p>
         </Link>
+        <div className="search ml-3">
+            <p className="searchtext">Search Country</p>
+            <Link to="/update/:id">
+            <FaSearch className="search-icon" size={30} color="#555" />
+            </Link>
+          </div>
       </div>
 
       <table className="table table-striped-columns">
