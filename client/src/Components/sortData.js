@@ -3,7 +3,7 @@ export const sortData = (data, sortOrder) => {
   
     const compareFunction = (a, b) => {
       const valueA = a[column].toLowerCase();
-      const valueB = b[column].toLowerCase();
+      const valueB = b[column].toLowerCase(); 
   
       if (column === "countryName") {
         // Sort by countryName alphabetically
