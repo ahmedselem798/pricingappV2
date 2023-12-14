@@ -29,16 +29,17 @@ const CountrySearch = () => {
     setRecord(sortData(countries, sortOrder));
   }, [sortOrder, countries]);
 
-
   useEffect(() => {
     axios
       .get("http://localhost:5000/")
       .then((result) => {
-        setCountries(result.data);
-        setRecord(result.data);
+        const sortedData = sortData(result.data, sortOrder);
+        setCountries(sortedData);
+        setRecord(sortedData);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [sortOrder]);
+  
   
 
   const filter = (event) => {
