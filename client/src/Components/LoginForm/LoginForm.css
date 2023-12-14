@@ -17,26 +17,49 @@
     margin-right: 17%; 
     margin-left: 10%;
   }
+
+  /* .password-toggle{
+    margin-top: 5%;
+    margin-right: -8%;
+    cursor: pointer;
+  } */
+
+  .password-toggle{
+    position: absolute;
+    top: 45.5%;
+    right: 45.5%;
+    font-size: medium;
+    cursor: pointer;
+  }
+
+  @media (max-width: 932px) {
+    .password-toggle {
+      top:24%; 
+      right: 20px; 
+    }
+  }
+ 
+
   
   .btn-secondary {
-    background-color: rgb(237, 82, 34);
+    background-color: #df8845;
     border-color: #cb854f;
     font-size: large;
     color: white;
     cursor: pointer;
-    margin-left: 10%;
+    margin-left: 19%;
     margin-top: 2px; 
-    width: 90%;
+    width: 70%;
     height: 47px;
   }
   
   .btn-secondary:hover {
-    background-color: #eea66f;
+    background-color: #e3b088;
     border-color: #eea66f;
   }
   
   .form-group-spacing {
-    margin-left: -10%;
+    margin-left: -5%;
     margin-top: 20px;
  }
 

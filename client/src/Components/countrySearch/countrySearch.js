@@ -1,11 +1,34 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./countrySearch.css";
+import { sortData } from "../sortData"; // Import the updated utility function
 import axios from "axios";
 
 const CountrySearch = () => {
   const [countries, setCountries] = useState([]);
   const [record, setRecord] = useState([]);
+  const [sortOrder, setSortOrder] = useState({
+    column: "countryName",
+    direction: "asc",
+  });
+
+  const handleSort = () => {
+    setSortOrder((prevSortOrder) => ({
+      column: "countryName",
+      direction:
+        prevSortOrder.column === "countryName" &&
+        prevSortOrder.direction === "asc"
+          ? "desc"
+          : "asc",
+    }));
+  };
+
+  useEffect(() => {
+    // Sorting logic using the updated utility function
+    setRecord(sortData(countries, sortOrder));
+  }, [sortOrder, countries]);
+
 
   useEffect(() => {
     axios
@@ -16,6 +39,7 @@ const CountrySearch = () => {
       })
       .catch((err) => console.log(err));
   }, []);
+  
 
   const filter = (event) => {
     setRecord(
@@ -32,7 +56,9 @@ const CountrySearch = () => {
       <table className="table table-striped-columns">
         <thead className="text-center">
           <tr>
-            <th>Country</th>
+          <th onClick={handleSort} className="country-header">
+              Country {sortOrder.direction === 'asc' ? '↑' : '↓'}
+            </th>            
             <th>Networks</th>
             <th>VPMN</th>
             <th>IMSI</th>
@@ -68,10 +94,16 @@ const CountrySearch = () => {
                 <td>{country.lte_m}</td>
                 <td>{country.nb_iot}</td>
                 <td>{country.note}</td>
-                <td></td>
               </tr>
             );
           })}
+           <tr>
+            <td colSpan="16">
+            <Link to="/price">
+              <button className="next">Next</button>
+            </Link>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>

@@ -68,7 +68,7 @@
 }
 
 .btn-primary {
-  background-color: rgb(237, 82, 34);
+  background-color: #df8845;
   border-color: #cb854f;
   font-size: large;
   color: white;
@@ -77,6 +77,6 @@
 }
 
 .btn-primary:hover {
-  background-color: #eea66f;
+  background-color: #e3b088;
   border-color: #eea66f;
 }

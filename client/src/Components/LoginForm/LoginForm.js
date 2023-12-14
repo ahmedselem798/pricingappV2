@@ -11,8 +11,9 @@ class LoginForm extends Component {
     this.state = {
       email: "",
       password: "",
-      emailError: "", // New state variable for email error message
-      passwordError: "", // New state variable for password error message
+      emailError: "",
+      passwordError: "",
+      showPassword: false,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -39,7 +40,6 @@ class LoginForm extends Component {
           window.localStorage.setItem("loggedIn", true );
           window.location.href = "/countries";
         } else {
-          // Set the error message state based on the error type
           if (data.error === "User not exist") {
             this.setState({
               emailError: "User with this email does not exist",
@@ -51,19 +51,17 @@ class LoginForm extends Component {
               passwordError: "Incorrect Password",
             });
           } else {
-            // If neither "User not exist" nor "Password incorrect" error is returned,
-            // set a generic error message
             this.setState({
               emailError: "Unexpected error occurred",
               passwordError: "",
             });
           }
         }
-      })
+      });
   }
 
   render() {
-    const { emailError, passwordError } = this.state;
+    const { emailError, passwordError, showPassword } = this.state;
 
     return (
       <div className="container-sm" style={{ backgroundImage: `url(${formbg4})` }}>
@@ -83,7 +81,7 @@ class LoginForm extends Component {
 
                 {emailError && <p className="text-danger">{emailError}</p>}
 
-                <Form.Group className="mb-3 form-group-spacing d-flex">
+                {/* <Form.Group className="mb-3 form-group-spacing d-flex">
                   <LockFill size={20} className="form-icon" />
                   <Form.Control
                     type="password"
@@ -91,18 +89,32 @@ class LoginForm extends Component {
                     className="custom-input"
                     onChange={(e) => this.setState({ password: e.target.value })}
                   />
+                </Form.Group> */}
+  
+
+                <Form.Group className="mb-3 form-group-spacing d-flex">
+                  <LockFill size={20} className="form-icon" />
+                  <Form.Control
+                    type={showPassword ? "text" : "password"}
+                    placeholder="Enter Password"
+                    className="custom-input"
+                    onChange={(e) => this.setState({ password: e.target.value })}
+                  />
+                   <div className="password-toggle" onClick={() => this.setState({ showPassword: !showPassword })}>
+                    {showPassword ? "🔒" : "👁️"}
+                  </div>
                 </Form.Group>
 
                 {passwordError && <p className="text-danger">{passwordError}</p>}
 
                 <Form.Group className="mb-3 form-group-spacing d-flex">
                   <p className="text-start">
-                    To Reset Your Password {" "} <br />
+                    Reset {" "}
                     <Link
                       to="/reset-password"
                       className="link-opacity-25-hover"
                     >
-                      Click here
+                      Password
                     </Link>
                   </p>
                 </Form.Group>

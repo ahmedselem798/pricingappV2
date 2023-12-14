@@ -113,3 +113,23 @@ table {
   border: 0;
 }
 
+.next{
+  background-color: #df8845;
+  color: #fff;
+  margin-top: 1%;
+  border-radius: 10px;
+  border: 0;
+  height: 43px;
+  width: 20%;
+}
+
+.next:hover{
+  background-color: #eea66f;
+  color: #fff;
+  margin-top: 1%;
+  border-radius: 10px;
+  border: 0;
+  height: 43px;
+  width: 20%;
+}
+
