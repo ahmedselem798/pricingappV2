@@ -26,10 +26,10 @@ app.use(express.urlencoded({extended:false}))
 mongoose
   .connect(process.env.DATABASE_CONNECTION_URL)
   .then(() => {
-    console.log("Database Connected.....");
+    console.log("Database Connected......");
   })
-  .catch(() => {
-    console.log("Faild to Connect Database.....");
+  .catch((error) => {
+    console.log("Faild to Connect Database....." + error);
   });
 
 Countries(app);
