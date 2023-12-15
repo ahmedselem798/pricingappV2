@@ -109,12 +109,12 @@ class LoginForm extends Component {
 
                 <Form.Group className="mb-3 form-group-spacing d-flex">
                   <p className="text-start">
-                    Reset {" "}
+                    To Reset your Password  {" "}
                     <Link
                       to="/reset-password"
                       className="link-opacity-25-hover"
                     >
-                      Password
+                      Click her
                     </Link>
                   </p>
                 </Form.Group>
