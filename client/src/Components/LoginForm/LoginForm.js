@@ -91,19 +91,19 @@ class LoginForm extends Component {
                   />
                 </Form.Group> */}
   
-
-                <Form.Group className="mb-3 form-group-spacing d-flex">
-                  <LockFill size={20} className="form-icon" />
-                  <Form.Control
-                    type={showPassword ? "text" : "password"}
-                    placeholder="Enter Password"
-                    className="custom-input"
-                    onChange={(e) => this.setState({ password: e.target.value })}
-                  />
-                   <div className="password-toggle" onClick={() => this.setState({ showPassword: !showPassword })}>
-                    {showPassword ? "🔒" : "👁️"}
-                  </div>
-                </Form.Group>
+              <Form.Group className="mb-3 form-group-spacing d-flex password-container">
+                    <LockFill size={20} className="form-icon" />
+                    <Form.Control
+                      type={showPassword ? "text" : "password"}
+                      placeholder="password"
+                      className="custom-input"
+                      onChange={(e) => this.setState({ password: e.target.value })}
+                    />
+                    <div className="password-toggle" onClick={() => this.setState({ showPassword: !showPassword })}>
+                      {showPassword ? "🔒" : "👁️"}
+                    </div>
+                 </Form.Group>
+               
 
                 {passwordError && <p className="text-danger">{passwordError}</p>}
 

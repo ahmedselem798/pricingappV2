@@ -24,22 +24,19 @@
     cursor: pointer;
   } */
 
-  .password-toggle{
+  .password-container {
+    position: relative;
+    
+  }
+  
+  .password-toggle {
     position: absolute;
-    top: 45.5%;
-    right: 45.5%;
+    top: 50%;
+    right: 9px; 
+    transform: translateY(-70%); 
     font-size: medium;
     cursor: pointer;
   }
-
-  @media (max-width: 932px) {
-    .password-toggle {
-      top:33.5%; 
-      right: 20px; 
-    }
-  }
- 
-
   
   .btn-secondary {
     background-color: #df8845;
