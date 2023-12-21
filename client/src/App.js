@@ -10,7 +10,6 @@ import ResetPassword from "./Components/ResetPassword/ResetPassword";
 import CountrySearch from "./Components/countrySearch/countrySearch";
 import PricingForm from "./Components/PricingForm/PricingForm";
 
-
 function App() {
   const isLoggedIn = window.localStorage.getItem("loggedIn");
   return (
@@ -21,13 +20,34 @@ function App() {
             index
             element={isLoggedIn === "true" ? <CountriesTable /> : <LoginForm />}
           ></Route>
-          {/* <Route path="/countries" element={<CountriesTable />} /> */}
-          <Route path="/create" element={<CreateCountry />} />
-          <Route path="/update/:id" element={<UpdateCountry />} />
-          <Route path="/register" element={<RegistrationForm />} />
-          <Route path="/search" element={<CountrySearch />} />
+          <Route
+            exact
+            path="/create"
+            element={isLoggedIn === "true" ? <CreateCountry /> : <LoginForm />}
+          ></Route>{" "}
+          <Route
+            exact
+            path="/update/:id"
+            element={isLoggedIn === "true" ? <UpdateCountry /> : <LoginForm />}
+          ></Route>{" "}
+          <Route
+            exact
+            path="/register"
+            element={
+              isLoggedIn === "true" ? <RegistrationForm /> : <LoginForm />
+            }
+          ></Route>{" "}
+          <Route
+            exact
+            path="/search"
+            element={isLoggedIn === "true" ? <CountrySearch /> : <LoginForm />}
+          ></Route>{" "}
+          <Route
+            exact
+            path="/price"
+            element={isLoggedIn === "true" ? <PricingForm /> : <LoginForm />}
+          ></Route>
           <Route path="/reset-password" element={<ResetPassword />} />
-          <Route path="/price" element={<PricingForm />} />
         </Routes>
       </BrowserRouter>
     </div>
