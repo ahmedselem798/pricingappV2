@@ -136,7 +136,7 @@ useEffect(()=>{
                     <select
                       value={provider}
                       onChange={(e) => SetProvider(e.target.value)}
-                      className="custom-select-provider"
+                      className="custom-select-provider provider"
                     >
                       <option value="" disabled selected>
                         Select Provider

@@ -29,6 +29,7 @@
     margin-left: 3%;
     font-weight: 700;
     font-style: italic;
+    white-space: nowrap;
   }
  
   .form-control {
@@ -131,4 +132,6 @@
     border-color: #eea66f;
 }
 
-
+.provider{
+  margin-top: 6px!important;
+}

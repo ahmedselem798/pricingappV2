@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./countrySearch.css";
-import { sortData } from "../sortData"; // Import the updated utility function
+import { sortData } from "../sortData"; 
 import axios from "axios";
 
 const CountrySearch = () => {

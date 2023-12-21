@@ -110,12 +110,12 @@ function CreateCountry() {
                       onChange={(e) => SetIMSI(e.target.value)}
                     />
                   </Col>
-                  <Col>
-                    <Form.Label>Provider</Form.Label><br/>
+                  <Col >
+                    <Form.Label>Provider</Form.Label> 
                     <select
                       value={provider}
                       onChange={(e) => SetProvider(e.target.value)}
-                      className="custom-select-provider"
+                      className="custom-select-provider provider"
                     >
                       <option value="" disabled selected>
                         Select Provider
