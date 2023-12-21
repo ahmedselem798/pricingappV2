@@ -18,11 +18,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route
-            exact
-            path="/"
+            index
             element={isLoggedIn === "true" ? <CountriesTable /> : <LoginForm />}
           ></Route>
-          <Route path="/countries" element={<CountriesTable />} />
+          {/* <Route path="/countries" element={<CountriesTable />} /> */}
           <Route path="/create" element={<CreateCountry />} />
           <Route path="/update/:id" element={<UpdateCountry />} />
           <Route path="/register" element={<RegistrationForm />} />

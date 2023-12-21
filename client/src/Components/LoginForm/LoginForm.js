@@ -38,7 +38,7 @@ class LoginForm extends Component {
         if (data.status === "ok") {
           window.localStorage.setItem("token", data.data);
           window.localStorage.setItem("loggedIn", true );
-          window.location.href = "/countries";
+          window.location.href = "/";
         } else {
           if (data.error === "User not exist") {
             this.setState({
