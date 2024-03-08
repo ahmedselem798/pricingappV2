@@ -125,6 +125,7 @@ table {
 
 .next:hover{
   background-color: #eea66f;
+  text-decoration: none;
   color: #fff;
   margin-top: 1%;
   border-radius: 10px;
@@ -132,4 +133,5 @@ table {
   height: 43px;
   width: 20%;
 }
+
 

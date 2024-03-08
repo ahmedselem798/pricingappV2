@@ -1,6 +1,6 @@
 .container {
     border-radius: 10px;
-    max-width: 550px;
+    max-width: 450px;
     margin: auto;
     margin-top: 10px; 
     margin-bottom: 15px;
@@ -9,15 +9,10 @@
     padding: 20px;
     padding-left: 3%;
   }
-
-  /* .container-background {
-    background-size: cover;
-    background-position: center;
-    height: 100vh; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  } */
+  .depimg3{
+   margin-top: -35px;
+   margin-left: -470px;
+  }
 
   .form-group {
     margin-bottom: 20px;
@@ -53,8 +48,9 @@
   }
   
   .btn-primary{
-    margin-top: 10%;
-    margin-left: 2%;
-    margin-bottom: -5%;
+    margin-top: 6%;
+    margin-left: 5%!important;
+    margin-bottom: -4%;
+    width: 70%!important;
   }
  

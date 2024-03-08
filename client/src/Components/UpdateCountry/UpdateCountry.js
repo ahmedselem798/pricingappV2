@@ -3,6 +3,9 @@ import { useNavigate, useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import "./UpdateCountry.css";
 import { Form, Container, Row, Col, Button, InputGroup } from "react-bootstrap";
+import depimg from "../../images/depimg.png"
+import { Link } from "react-router-dom";
+
 
 function UpdateCountry() {
   const { id } = useParams();  
@@ -75,6 +78,9 @@ useEffect(()=>{
 
   return (
     <Container fluid className="container-xxl">
+      <Link to='/'>
+        <img className="depimg2" src={depimg}></img>
+        </Link>
       <Container className="container-lg">
         <Row>
           <Col>
@@ -190,7 +196,7 @@ useEffect(()=>{
         className="custom-select"
       >
         <option value="" disabled>
-          4G
+          4G LTE
         </option>
         <option value="Yes">Yes</option>
         <option value="No">No</option>
@@ -216,14 +222,14 @@ useEffect(()=>{
     </InputGroup>
   </Col>
   <Col md={4}>
-    <InputGroup className="mb-2">
+  <InputGroup className="mb-2 custom-nbiot-input-group">
       <select
-        value={lte}
-        onChange={(e) => SetLTE(e.target.value)}
+        value={nb_iot}
+        onChange={(e) => SetNB_IoT(e.target.value)}
         className="custom-select"
       >
         <option value="" disabled>
-          LTE
+          NB-IOT
         </option>
         <option value="Yes">Yes</option>
         <option value="No">No</option>
@@ -239,24 +245,6 @@ useEffect(()=>{
       >
         <option value="" disabled>
           LTE-M
-        </option>
-        <option value="Yes">Yes</option>
-        <option value="No">No</option>
-      </select>
-    </InputGroup>
-  </Col>
-</Row>
-
-<Row>
-  <Col md={4}>
-    <InputGroup className="mb-2 custom-nbiot-input-group">
-      <select
-        value={nb_iot}
-        onChange={(e) => SetNB_IoT(e.target.value)}
-        className="custom-select"
-      >
-        <option value="" disabled>
-          NB-IOT
         </option>
         <option value="Yes">Yes</option>
         <option value="No">No</option>

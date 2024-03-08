@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./PricingForm.css";
+import depimg from "../../images/depimg.png"
+import { Link } from "react-router-dom";
 
 const PricingForm = () => {
   const [paymentMethod, setPaymentMethod] = useState("");
@@ -86,6 +88,9 @@ const PricingForm = () => {
 
   return (
     <div className="container mt-4">
+      <Link to='/'>
+        <img className="depimg3" src={depimg}></img>
+        </Link> 
       <div className="row">
         <div className="col-md-6">
           <div className="mb-3">
@@ -100,7 +105,7 @@ const PricingForm = () => {
               onChange={() => setTotal(0)}
               onInput={(e) => setCost(e.target.value)}
             />
-          </div>
+          </div> 
           <div className="mb-3">
             <label htmlFor="dataUnit" className="form-label">
               Data Unit

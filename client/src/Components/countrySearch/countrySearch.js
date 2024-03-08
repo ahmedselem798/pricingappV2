@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./countrySearch.css";
 import { sortData } from "../sortData"; 
 import axios from "axios";
+import depimg from "../../images/depimg.png"
 
 const CountrySearch = () => {
   const [countries, setCountries] = useState([]);
@@ -43,16 +44,20 @@ const CountrySearch = () => {
   
 
   const filter = (event) => {
+    const searchTerm = event.target.value.toLowerCase();
     setRecord(
       countries.filter((f) =>
-        f.countryName.toLowerCase().includes(event.target.value)
+        f.countryName.toLowerCase().includes(searchTerm)
       )
     );
   };
+  
 
   return (
     <div>
-      {/* <div className="d-flex mb-3"></div> */}
+      <Link to='/'>
+          <img className="depimg2" src={depimg} alt="Department" />
+        </Link>
       <input type="text" className="form-control" onChange={filter} />
       <table className="table table-striped-columns">
         <thead className="text-center">
@@ -61,7 +66,6 @@ const CountrySearch = () => {
               Country {sortOrder.direction === 'asc' ? '↑' : '↓'}
             </th>            
             <th>Networks</th>
-            <th>VPMN</th>
             <th>IMSI</th>
             <th>Data Cost per MB</th>
             <th>Cost of 1 GB</th>
@@ -70,9 +74,9 @@ const CountrySearch = () => {
             <th>3G</th>
             <th>4G</th>
             <th>5G</th>
-            <th>LTE</th>
             <th>LTE_M</th>
             <th>NB_IoT</th>
+            <th>VPMN</th>
             <th>Notes</th>
           </tr>
         </thead>
@@ -82,7 +86,6 @@ const CountrySearch = () => {
               <tr key={country._id}>
                 <td>{country.countryName}</td>
                 <td>{country.network}</td>
-                <td>{country.vpmn}</td>
                 <td>{country.imsi}</td>
                 <td>{country.dataCostPerMB}</td>
                 <td>{country.dataCostPerMB * 1024}</td>
@@ -91,9 +94,9 @@ const CountrySearch = () => {
                 <td>{country._3G}</td>
                 <td>{country._4G}</td>
                 <td>{country._5G}</td>
-                <td>{country.lte}</td>
                 <td>{country.lte_m}</td>
                 <td>{country.nb_iot}</td>
+                <td>{country.vpmn}</td>
                 <td>{country.note}</td>
               </tr>
             );
@@ -101,7 +104,7 @@ const CountrySearch = () => {
            <tr>
             <td colSpan="16">
             <Link to="/price">
-              <button className="next">Next</button>
+              <button className="next">Go to Pricing</button>
             </Link>
             </td>
           </tr>

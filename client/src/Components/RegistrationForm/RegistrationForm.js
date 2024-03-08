@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./RegistrationForm.css";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import formbg4 from "../../images/formbg4.jpg";
+import depimg from "../../images/depimg.png"
+import { Link } from "react-router-dom";
 import {
   PersonFill,
   Envelope,
@@ -55,7 +57,10 @@ class RegistrationForm extends Component {
         className="container-md"
         style={{ backgroundImage: `url(${formbg4})` }}
       >
-        <Container>
+        <Container className="new">
+        <Link to='/'>
+        <img className="depimg4" src={depimg}></img>
+        </Link> 
           <Row className="justify-content-center">
             <Col md={6}>
               <Form onSubmit={this.handleSubmit}>
@@ -89,11 +94,6 @@ class RegistrationForm extends Component {
                   />
                 </Form.Group>
 
-                {/* <Form.Group className="mb-3 form-group-spacing d-flex">
-                  <Building size={20} className="form-icon" />
-                  <Form.Control type="text" placeholder="Company Name" className="custom-input" />
-                </Form.Group> */}
-
                 <Form.Group className="mb-3 form-group-spacing d-flex">
                   <Phone size={20} className="form-icon" />
                   <Form.Control
@@ -113,11 +113,6 @@ class RegistrationForm extends Component {
                     onChange={(e) => this.setState({ password: e.target.value })}
                   />
                 </Form.Group>
-
-                {/* <Form.Group className="mb-3 form-group-spacing d-flex">
-                  <ArrowRepeat size={20} className="form-icon" />
-                  <Form.Control type="password" placeholder="Re-Enter Password" className="custom-input" />
-                </Form.Group> */}
 
                 <Button
                   variant="primary"

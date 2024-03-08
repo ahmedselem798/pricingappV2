@@ -93,7 +93,7 @@
 }
 
 .custom-nbiot-input-group {
-  margin-top: 15px;
+  margin-top: 1px!important;
   /* width: 338%; */
 }
 
@@ -119,15 +119,17 @@
     width: 40%!important;
     margin-top: 4.5%;
     margin-bottom: 0.5%;
-    margin-left: 33%;
-    background-color: rgb(237, 82, 34);
-    border-color: rgb(237, 82, 34);
+    margin-left: 33%!important;
+    background-color: #df8845;
+    border-color: #cb854f;
     font-size: large;
     align-self: center;
     cursor: pointer;
     font-style: italic;
   }
-
+.depimg2{
+  margin-left: 25px!important;
+}
   .btn:hover {
     background-color: #eea66f;
     border-color: #eea66f;
