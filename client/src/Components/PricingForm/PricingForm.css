@@ -12,6 +12,7 @@
   .depimg3{
    margin-top: -35px;
    margin-left: -470px;
+   width: 140px;
   }
 
   .form-group {
@@ -52,5 +53,10 @@
     margin-left: 5%!important;
     margin-bottom: -4%;
     width: 70%!important;
+  }
+  @media only screen and (max-width: 768px) {
+    .container{
+      max-width: 370px;
+    }
   }
  

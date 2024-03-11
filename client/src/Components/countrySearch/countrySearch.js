@@ -104,7 +104,7 @@ const CountrySearch = () => {
            <tr>
             <td colSpan="16">
             <Link to="/price">
-              <button className="next">Go to Pricing</button>
+              <button className="next">CALCULATE</button>
             </Link>
             </td>
           </tr>

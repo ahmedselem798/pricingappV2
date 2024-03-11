@@ -1,7 +1,7 @@
 
     table {
       position: absolute;
-      top: 4%;
+      top: 8%;
       width: 100%;
       text-align: center;
       margin-top: 130px!important;
@@ -336,14 +336,41 @@
       color: #a80606;
     }
     .all3{
-      margin-left: 13%!important;
+      margin-left: 22%!important;
       margin-top: 1%!important;
     }
+    .all2 {
+      display: flex;
+      justify-content: space-between; /* Align items to the start and end of the container */
+      align-items: center; 
+    }
+    
+    .menu-icon {
+      margin-right: 20px; 
+      cursor: pointer;
+    }
+    
+    .side-menu {
+      position: absolute;
+      top: 50px; 
+      right: 20px; 
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      z-index: 999; /* Ensure the menu is on top of other elements */
+    }
+    .all-sidemenu{
+      display: inline;
+    }
+    .side-menu .button-18 {
+      margin-left: 10px!important; 
+    }
+    
     
     @media only screen and (max-width: 768px) {
       .depimg2{
-      height: 50px!important;
-      width: 100px!important;
+      height: 30px!important;
+      width: 50px!important;
       margin-bottom: 10px!important;
       }
       .country-header {
@@ -356,7 +383,7 @@
     
       .table {
         width: 600px; 
-        margin-top: 100px;
+        margin-top: 50px!important;
         margin-left: 0px;/* Make the table take full width */
       }
     
@@ -376,6 +403,26 @@
       }
       .all{
         margin-left: 0px!important;
+      }
+      .menu-icon {
+        cursor: pointer;
+        margin-right:30%!important;
+      }
+      
+      .side-menu {
+       margin-right: 22%!important;
+       width: 90px!important;
+      }
+  
+      .all-sidemenu{
+        display: inline-block;
+      }
+      .side-menu .button-18,
+      .side-menu .button-17 {
+        width: 60%!important; /* Set the width of buttons to 100% of the side menu */
+        margin-left: -2%!important;
+        margin-bottom: -2%!important;
+        
       }
     }
     
@@ -462,6 +509,13 @@
       margin-top: 10px;
     }
     
+    
+    .side-menu .button-18,
+    .side-menu .button-17 {
+      width: 100%; /* Set the width of buttons to 100% of the side menu */
+      margin-bottom: 10px; /* Add margin-bottom to create space between buttons */
+    }
+
     @media only screen and (max-width: 768px) {
       .button-19 {
         margin: 0; 
@@ -525,13 +579,35 @@
       }
       .all3{
         margin: 0px!important;
-        margin-left: -2%!important;
+        margin-left: 10%!important;
       }
      
+    .menu-icon {
+      cursor: pointer;
+      margin-right:30%!important;
+    }
+    
+    .side-menu {
+     margin-right: 22%!important;
+     width: 90px!important;
+    }
+
+    .all-sidemenu{
+      display: inline-block;
+    }
+    .side-menu .button-18,
+    .side-menu .button-17 {
+      width: 60%!important; /* Set the width of buttons to 100% of the side menu */
+      margin-left: -2%!important;
+      margin-bottom: -2%!important;
+      
+    }
+
     }
     
     .depimg2{
-      margin-left: -10%!important;
+      margin-left: 1%!important;
+      width: 130px;
     }
     
     .all2{
@@ -634,3 +710,4 @@
     .all3{
       margin-left: 300px;
     }
+
