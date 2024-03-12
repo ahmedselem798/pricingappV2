@@ -34,6 +34,16 @@
     border-radius: 4px;
     box-sizing: border-box;
   }
+  .form-controlfinal {
+    width: 180%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-left:10%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
   
   .form-select {
     width: 100%;
@@ -51,21 +61,25 @@
   
   .btn-primary{
     margin-top: 6%;
-    margin-left: 2%!important;
+    margin-left: 6%!important;
     margin-bottom: -4%;
     width: 150%!important;
+    background-color:#e48a41;
+    border-color: #e48a41;
   }
 
   .pricebutton {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: 27%!important;
     width: 150%;
   }
   
   .pricebutton .btn-primary {
     flex: 1; /* Equal width for both buttons */
-    margin-right: 10px!important;
+    margin-right: 15px!important;
+    
   }
   .pricebutton .btn-back {
     background-color: rgb(171, 163, 155); 
@@ -86,7 +100,19 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 80%;
+      width: 90%;
+      margin-left: 5%!important;
+    }
+
+    .form-controlfinal {
+      width: 90%;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      margin-left:6%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
     }
   } 
 

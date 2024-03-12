@@ -361,7 +361,7 @@ const PricingForm = () => {
               <br />
               <input
                 type="text"
-                className="form-controlprice"
+                className="form-controlfinal"
                 id="costPerMB"
                 value={total}
                 readOnly
