@@ -14,13 +14,13 @@
   width: 170px;
 }
 .btn-primary {
-  background-color: #df8845;
-  border-color: #cb854f;
+  background-color: e48a41#;
+  border-color:  #e48a41;
   font-size: large;
   color: white;
   cursor: pointer;
-  margin-left: 25%!important;
-  width: 150px!important;
+  margin-left: 20%!important;
+  max-width: 100px!important;
 }
 
 .btn-primary:hover {

@@ -14,7 +14,7 @@
   padding: 30px;
   border-radius: 10px;
   margin: 20px;
-  margin-left: 7%;
+  margin-left: 7%!important;
   margin-right: auto; 
   margin-top: 0px;
   margin-bottom: 0px;
@@ -30,6 +30,8 @@
     font-weight: 700;
     font-style: italic;
     white-space: nowrap;
+    margin-left: -2%!important;
+
   }
 
  
@@ -45,6 +47,8 @@
     margin-left: 3%;
     margin-top: 0.8%;
     cursor: pointer;
+    margin-left: 1%!important;
+
   }
 
 .form-control:focus {
@@ -120,7 +124,7 @@
     margin-top: 4.5%;
     margin-bottom: 0.5%;
     margin-left: 33%!important;
-    background-color: #df8845;
+    background-color:#e48a41;
     border-color: #cb854f;
     font-size: large;
     align-self: center;
@@ -137,5 +141,5 @@
 
 
 .provider{
-  margin-top: 6px!important;
+  margin-top: -2%!important;
 }

@@ -55,10 +55,10 @@ const CountrySearch = () => {
 
   return (
     <div>
-      <Link to='/'>
+     <div className="logosearch"> <Link to='/'>
           <img className="depimg2" src={depimg} alt="Department" />
-        </Link>
-      <input type="text" className="form-control" onChange={filter} />
+        </Link> </div>
+     <div className="search"> <input type="text" className="form-controlsearch" onChange={filter} /> </div>
       <table className="table table-striped-columns">
         <thead className="text-center">
           <tr>

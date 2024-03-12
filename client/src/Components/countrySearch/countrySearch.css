@@ -138,12 +138,19 @@ table {
 .depimg2{
 margin-top: 10px!important;
 }
+.logosearch{
+  margin-top: 1%!important;
+}
+.search{
+  margin-top: -2%!important;
+  margin-left: 8%!important;
 
-.form-control{
-  border-radius: 10px!important;
+}
+.form-controlsearch{
+  /* border-radius: 10px!important; */
   width:60%!important;
-  margin-left: 18.8%!important;
-  margin-top: 2%!important;
+  margin-left: 15%!important;
+  margin-top: 5%!important;
   border: 1.5px solid black!important;
 }
 @media only screen and (max-width: 768px) {
@@ -153,10 +160,19 @@ margin-top: 10px!important;
   margin-top: 5px!important;
   margin-left: 9px!important;
   } 
-  .form-control{
+  .form-controlsearch{
     margin-left: 16%!important;
     width:225%!important;
     margin-top: 4%!important;
     border: 1.5px solid black!important;
   }
+  
+.table {
+  margin-top: 9%!important;
+}
+.search{
+width: 250%!important;
+margin-left: -13%!important;
+margin-top: -7%!important;
+}
 }
