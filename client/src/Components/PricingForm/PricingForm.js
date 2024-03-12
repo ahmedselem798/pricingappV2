@@ -99,7 +99,7 @@ const PricingForm = () => {
             </label>
             <input
               type="text"
-              className="form-control"
+              className="form-controlprice"
               id="costPerMB"
               value={cost}
               onChange={() => setTotal(0)}
@@ -126,7 +126,7 @@ const PricingForm = () => {
             </label>
             <input
               type="text"
-              className="form-control"
+              className="form-controlprice"
               id="data"
               value={dataValue}
               onChange={handleDataValueChange}
@@ -142,7 +142,7 @@ const PricingForm = () => {
             {dataUnit === "GB" && (
               <input
                 type="text"
-                className="form-control"
+                className="form-controlprice"
                 id="convertedValue"
                 value={convertedValue}
                 onInput={(e) => setNumberOfGB(e.target.value)}
@@ -174,7 +174,7 @@ const PricingForm = () => {
             </label>
             <input
               type="text"
-              className="form-control"
+              className="form-controlprice"
               id="quantityOfSIMs"
               value={numberOfSIMs}
               onInput={(e) => setNumberOfSIMs(e.target.value)}
@@ -358,7 +358,7 @@ const PricingForm = () => {
               <br />
               <input
                 type="text"
-                className="form-control"
+                className="form-controlprice"
                 id="costPerMB"
                 value={total}
                 readOnly

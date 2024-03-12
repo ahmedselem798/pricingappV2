@@ -117,6 +117,7 @@ table {
   background-color: #df8845;
   color: #fff;
   margin-top: 1%;
+  margin-left: -4%!important;
   border-radius: 10px;
   border: 0;
   height: 43px;
@@ -134,6 +135,17 @@ table {
   width: 20%;
 }
 
+.depimg2{
+margin-top: 10px!important;
+}
+
+.form-control{
+  border-radius: 10px!important;
+  width:60%!important;
+  margin-left: 18.8%!important;
+  margin-top: 2%!important;
+  border: 1.5px solid black!important;
+}
 @media only screen and (max-width: 768px) {
   .depimg2{
   height: 30px!important;
@@ -141,4 +153,10 @@ table {
   margin-top: 5px!important;
   margin-left: 9px!important;
   } 
+  .form-control{
+    margin-left: 16%!important;
+    width:225%!important;
+    margin-top: 4%!important;
+    border: 1.5px solid black!important;
+  }
 }

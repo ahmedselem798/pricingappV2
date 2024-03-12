@@ -409,7 +409,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./CountriesTable.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { FaSearch, FaBars } from "react-icons/fa"; // Import FaBars for the side menu icon
+import { FaSearch, FaBars } from "react-icons/fa";
 import depimg from "../../images/depimg.png";
 import { sortData } from "../sortData";
 
