@@ -231,7 +231,7 @@ function CreateCountry() {
   </Col>
 </Row>
 
-              <Col>
+             <Col>
                 <Form.Label className="notes">Notes</Form.Label>
                 <Form.Control
                   as="textarea"
@@ -240,6 +240,7 @@ function CreateCountry() {
                   onChange={(e) => SetNote(e.target.value)}
                 />
               </Col>
+
 
               <Button type="submit" className="btn btn-dark">
                 Submit
