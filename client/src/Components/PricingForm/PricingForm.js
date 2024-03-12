@@ -347,13 +347,16 @@ const PricingForm = () => {
             </div>
           )}
           <div className="mb-3">
-            <button
-              type="button"
-              className="btn btn-primary"
-              onClick={handleCalculate}
-            >
-              Calculate
-            </button>
+          <div className="pricebutton">
+  <button
+    type="button"
+    className="btn btn-primary"
+    onClick={handleCalculate}
+  >
+    Calculate
+  </button>
+  <Link to="/" className="btn btn-primary btn-back">Back</Link>
+</div>
             <div className="mb-3">
               <br />
               <input

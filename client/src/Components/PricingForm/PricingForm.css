@@ -50,14 +50,41 @@
   
   .btn-primary{
     margin-top: 6%;
-    margin-left: 5%!important;
+    margin-left: 2%!important;
     margin-bottom: -4%;
-    width: 70%!important;
+    width: 150%!important;
+  }
+
+  .pricebutton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150%;
+  }
+  
+  .pricebutton .btn-primary {
+    flex: 1; /* Equal width for both buttons */
+    margin-right: 10px!important;
+  }
+  .pricebutton .btn-back {
+    background-color: rgb(171, 163, 155); 
+    border-color:  rgb(171, 163, 155) ;
+  }
+  .pricebutton .btn-back:hover {
+    background-color: rgb(218, 213, 213); 
+    border-color: rgb(218, 213, 213) ;
   }
   
    @media only screen and (max-width: 768px) {
     .container{
       max-width: 370px;
+    }
+
+    .pricebutton {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
     }
   } 
  
