@@ -43,7 +43,6 @@ function CreateCountry() {
         _2G,
         _3G,
         _5G,
-        lte,
         lte_m,
         nb_iot,
       });
