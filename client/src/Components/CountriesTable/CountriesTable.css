@@ -374,8 +374,8 @@
       }
     
     @media only screen and (max-width: 768px) {
-      .depimg2{
-      height: 60px!important;
+      .depimg6{
+      height: 50px!important;
       width: 75px!important;
       margin-bottom: 10px!important;
       }
@@ -610,8 +610,8 @@
     }
   }
     
-    .depimg2{
-      margin-left: 1%!important;
+    .depimg6{
+      margin-left: 13%!important;
       width: 130px;
     }
     
