@@ -43,6 +43,7 @@ function CreateCountry() {
         _2G,
         _3G,
         _5G,
+        // lte,
         lte_m,
         nb_iot,
       });
@@ -56,7 +57,7 @@ function CreateCountry() {
   return (
     <Container fluid className="container-xxl">
       <Link to='/'>
-        <img className="depimg2" src={depimg}></img>
+        <img className="depimg5" src={depimg}></img>
         </Link>
       <Container className="container-lg">
         <Row>

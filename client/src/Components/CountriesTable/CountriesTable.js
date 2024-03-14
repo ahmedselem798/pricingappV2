@@ -454,14 +454,14 @@ const CountriesTable = () => {
     <div>
       <div className="all2">
         <Link to='/'>
-          <img className="depimg2" src={depimg} alt="Department" />
+          <img className="depimg6" src={depimg} alt="Department" />
         </Link>
         {/* Side menu icon */}
         <div className="menu-icon" onClick={toggleMenu}>
           <FaBars />
         </div>
         {/* Side menu drawer */}
-        {showMenu && (
+         {showMenu && (
           <div className="side-menu">
             <div className="all-sidemenu">
               <div style={{padding:4}}>
@@ -481,7 +481,7 @@ const CountriesTable = () => {
             </div>
             </div>
           </div>
-        )}
+        )} 
       </div>
 
       <div className="all3">

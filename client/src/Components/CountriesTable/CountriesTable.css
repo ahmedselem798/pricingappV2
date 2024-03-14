@@ -366,13 +366,20 @@
       margin-left: 10px!important; 
     }
     
+    .depimg6{
+    
+      margin-left: 20px!important;
+      height: 50px;
+      width: 150px;
+      }
     
     @media only screen and (max-width: 768px) {
       .depimg2{
-      height: 30px!important;
-      width: 50px!important;
+      height: 60px!important;
+      width: 75px!important;
       margin-bottom: 10px!important;
       }
+    
       .country-header {
         text-align: left;
       }
@@ -383,11 +390,9 @@
     
       .table {
         width: 600px; 
-        margin-top: 50px!important;
+        margin-top: 60px!important;
         margin-left: 0px;/* Make the table take full width */
       }
-    
-      
     
       .table tr:hover td {
         display: table-cell;
@@ -411,7 +416,7 @@
       
       .side-menu {
        margin-right: 22%!important;
-       width: 90px!important;
+       width: 95px!important;
       }
   
       .all-sidemenu{
@@ -425,7 +430,6 @@
         
       }
     }
-    
     
     
     .button-19 {
@@ -536,7 +540,7 @@
 
       table {
         position: absolute;
-        top: 13%;
+        top: 15%;
         width: 100%;
         text-align: left;
         margin-top: 125px!important;
@@ -596,6 +600,7 @@
     .all-sidemenu{
       display: inline-block;
     }
+
     .side-menu .button-18,
     .side-menu .button-17 {
       width: 60%!important; /* Set the width of buttons to 100% of the side menu */
@@ -603,8 +608,7 @@
       margin-bottom: -2%!important;
       
     }
-
-    }
+  }
     
     .depimg2{
       margin-left: 1%!important;

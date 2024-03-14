@@ -130,7 +130,7 @@
     cursor: pointer;
     font-style: italic;
   }
-.depimg2{
+.depimg5{
   margin-left: 25px!important;
 }
   .btn:hover {
@@ -142,3 +142,33 @@
 .provider{
   margin-top: -2%!important;
 }
+
+
+@media only screen and (max-width: 844px) {
+  .container-lg{
+    width: 320px!important;
+  }
+  .depimg5{
+     Width:90px!important ;
+     height:50px!important;
+     }
+
+     .form-label {
+      margin-left: 5%!important;
+  
+    }
+  
+   
+    .form-control {
+      margin-left: 3%!important;
+  
+    }
+
+  }
+
+  @media only screen and (max-width: 932px) {
+    
+  .container-lg{
+    width: 350px!important;
+  }
+   }
