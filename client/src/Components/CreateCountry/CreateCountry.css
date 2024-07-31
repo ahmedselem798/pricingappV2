@@ -14,7 +14,7 @@
   padding: 30px;
   border-radius: 10px;
   margin: 20px;
-  margin-left: 7%;
+  margin-left: 7%!important;
   margin-right: auto; 
   margin-top: 0px;
   margin-bottom: 0px;
@@ -30,6 +30,8 @@
     font-weight: 700;
     font-style: italic;
     white-space: nowrap;
+    margin-left: 1%!important;
+
   }
 
  
@@ -42,11 +44,12 @@
     opacity: 0.8;
     transition: border-color 0.8s;
     width: 97%;
-    margin-left: 3%;
     margin-top: 0.8%;
     cursor: pointer;
-  }
+    margin-left: -3%!important;
 
+  }
+  
 .form-control:focus {
       border-color: #0f482e; 
   } 
@@ -120,14 +123,14 @@
     margin-top: 4.5%;
     margin-bottom: 0.5%;
     margin-left: 33%!important;
-    background-color: #df8845;
+    background-color:#e48a41;
     border-color: #cb854f;
     font-size: large;
     align-self: center;
     cursor: pointer;
     font-style: italic;
   }
-.depimg2{
+.depimg5{
   margin-left: 25px!important;
 }
   .btn:hover {
@@ -137,5 +140,35 @@
 
 
 .provider{
-  margin-top: 6px!important;
+  margin-top: -2%!important;
 }
+
+
+@media only screen and (max-width: 844px) {
+  .container-lg{
+    width: 320px!important;
+  }
+  .depimg5{
+     Width:90px!important ;
+     height:50px!important;
+     }
+
+     .form-label {
+      margin-left: 5%!important;
+  
+    }
+  
+   
+    .form-control {
+      margin-left: 3%!important;
+  
+    }
+
+  }
+
+  @media only screen and (max-width: 932px) {
+    
+  .container-lg{
+    width: 350px!important;
+  }
+   }

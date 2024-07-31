@@ -43,7 +43,7 @@ function CreateCountry() {
         _2G,
         _3G,
         _5G,
-        lte,
+        // lte,
         lte_m,
         nb_iot,
       });
@@ -57,7 +57,7 @@ function CreateCountry() {
   return (
     <Container fluid className="container-xxl">
       <Link to='/'>
-        <img className="depimg2" src={depimg}></img>
+        <img className="depimg5" src={depimg}></img>
         </Link>
       <Container className="container-lg">
         <Row>
@@ -125,7 +125,7 @@ function CreateCountry() {
                       <option value="" disabled selected>
                         Select Provider
                       </option>
-                      <option value="FlowLive">Flolive</option>
+                      <option value="FloLive">Flolive</option>
                       <option value="PondMobile">PondMobile</option>
                     </select>
 
@@ -231,7 +231,7 @@ function CreateCountry() {
   </Col>
 </Row>
 
-              <Col>
+             <Col>
                 <Form.Label className="notes">Notes</Form.Label>
                 <Form.Control
                   as="textarea"
@@ -240,6 +240,7 @@ function CreateCountry() {
                   onChange={(e) => SetNote(e.target.value)}
                 />
               </Col>
+
 
               <Button type="submit" className="btn btn-dark">
                 Submit

@@ -86,6 +86,40 @@ const PricingForm = () => {
     setTotal(totalProfit.toFixed(2));
   };
 
+  // const handleCreditTransactionFeesChange = (e) => {
+  //   setShowCreditTransactionFees(e.target.checked);
+  // };
+
+  // const [cost, setCost] = useState("");
+  // const [creditCardFee, setCreditCardFee] = useState(0);
+  // const [numberOfSIMs, setNumberOfSIMs] = useState("");
+  // const [markUpPrice, setMarkUpPrice] = useState("");
+  // const [accessLineFee, setAccessLineFee] = useState("");
+  // const [numberOfMB, setNumberOfMB] = useState(0);
+  // const [numberOfGB, setNumberOfGB] = useState(0);
+  // const [utilizationRate, setUtilizationRate] = useState(100);
+  // const [creditTransactionFees, setCreditTransactionFees] = useState(0);
+  // const [total, setTotal] = useState(0);
+
+  // const handleCalculate = async () => {
+  //   const utilization = (parseFloat(numberOfMB) + parseFloat(numberOfGB)) * parseFloat(utilizationRate / 100);
+  //   const price = parseFloat(cost) * utilization;
+  //   const priceWithFee = price + parseFloat(accessLineFee);
+  //   const priceWithMarkUp = priceWithFee * parseFloat(markUpPrice / 100);
+  //   const profit = priceWithFee + priceWithMarkUp;
+
+  //   const totalProfit = profit * parseFloat(numberOfSIMs);
+
+  //   const ProfitWithCreditCardFee = totalProfit * parseFloat(creditCardFee / 100);
+
+  //   const totalProfitWithCreditTransactionFees = totalProfit * parseFloat(creditTransactionFees / 100);
+
+  //   const finalTotal = totalProfit + ProfitWithCreditCardFee + totalProfitWithCreditTransactionFees;
+
+  //   setTotal(finalTotal.toFixed(2));
+  // };
+
+
   return (
     <div className="container mt-4">
       <Link to='/'>
@@ -99,7 +133,7 @@ const PricingForm = () => {
             </label>
             <input
               type="text"
-              className="form-control"
+              className="form-controlprice"
               id="costPerMB"
               value={cost}
               onChange={() => setTotal(0)}
@@ -126,7 +160,7 @@ const PricingForm = () => {
             </label>
             <input
               type="text"
-              className="form-control"
+              className="form-controlprice"
               id="data"
               value={dataValue}
               onChange={handleDataValueChange}
@@ -142,7 +176,7 @@ const PricingForm = () => {
             {dataUnit === "GB" && (
               <input
                 type="text"
-                className="form-control"
+                className="form-controlprice"
                 id="convertedValue"
                 value={convertedValue}
                 onInput={(e) => setNumberOfGB(e.target.value)}
@@ -174,7 +208,7 @@ const PricingForm = () => {
             </label>
             <input
               type="text"
-              className="form-control"
+              className="form-controlprice"
               id="quantityOfSIMs"
               value={numberOfSIMs}
               onInput={(e) => setNumberOfSIMs(e.target.value)}
@@ -252,6 +286,13 @@ const PricingForm = () => {
               <option value={170.27}>63%</option>
               <option value={177.78}>64%</option>
               <option value={185.71}>65%</option>
+              <option value={70}>70%</option>
+              <option value={75}>75%</option>
+              <option value={80}>80%</option>
+              <option value={85}>85%</option>
+              <option value={90}>90%</option>
+              <option value={95}>95%</option>
+              <option value={100}>100%</option>
             </select>
           </div>
 
@@ -347,18 +388,21 @@ const PricingForm = () => {
             </div>
           )}
           <div className="mb-3">
-            <button
-              type="button"
-              className="btn btn-primary"
-              onClick={handleCalculate}
-            >
-              Calculate
-            </button>
+          <div className="pricebutton">
+  <button
+    type="button"
+    className="btn btn-primary"
+    onClick={handleCalculate}
+  >
+    Calculate
+  </button>
+  <Link to="/" className="btn btn-primary btn-back">Back</Link>
+</div>
             <div className="mb-3">
               <br />
               <input
                 type="text"
-                className="form-control"
+                className="form-controlfinal"
                 id="costPerMB"
                 value={total}
                 readOnly

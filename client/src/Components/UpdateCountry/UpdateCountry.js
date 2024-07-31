@@ -147,7 +147,7 @@ useEffect(()=>{
                       <option value="" disabled selected>
                         Select Provider
                       </option>
-                      <option value="FlowLive">Flolive</option>
+                      <option value="FloLive">Flolive</option>
                       <option value="PondMobile">PondMobile</option>
                     </select>
 

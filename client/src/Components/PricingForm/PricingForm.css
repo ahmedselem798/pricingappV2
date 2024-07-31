@@ -4,6 +4,7 @@
     margin: auto;
     margin-top: 10px; 
     margin-bottom: 15px;
+    margin-left: 33%!important;
     background-color: #aed6c4;
     box-shadow: 0 5px 9px rgba(0, 0, 0, 0.8);
     padding: 20px;
@@ -12,6 +13,7 @@
   .depimg3{
    margin-top: -35px;
    margin-left: -470px;
+   width: 140px;
   }
 
   .form-group {
@@ -22,12 +24,22 @@
     font-weight: bold;
   }
   
-  .form-control {
+  .form-controlprice {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
     margin-bottom: 15px;
     margin-left:1%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .form-controlfinal {
+    width: 180%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-left:10%;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -49,8 +61,81 @@
   
   .btn-primary{
     margin-top: 6%;
-    margin-left: 5%!important;
+    margin-left: 6%!important;
     margin-bottom: -4%;
-    width: 70%!important;
+    width: 150%!important;
+    background-color:#e48a41;
+    border-color: #e48a41;
   }
+
+  .pricebutton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 27%!important;
+    width: 150%;
+  }
+  
+  .pricebutton .btn-primary {
+    flex: 1; /* Equal width for both buttons */
+    margin-right: 15px!important;
+    
+  }
+  .pricebutton .btn-back {
+    background-color: rgb(171, 163, 155); 
+    border-color:  rgb(171, 163, 155) ;
+  }
+  .pricebutton .btn-back:hover {
+    background-color: rgb(218, 213, 213); 
+    border-color: rgb(218, 213, 213) ;
+  }
+
+  @media only screen and (max-width: 844px) {
+    .container{
+      max-width: 320px;
+      margin-left: 3%!important;
+    }
+
+      .pricebutton {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin-left: 5%!important;
+      }
+  
+      .form-controlfinal {
+        width: 90%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        margin-left:6%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+    }
  
+    @media only screen and (max-width: 932px) {
+      .container{
+        max-width: 450px;
+        margin-left: 0.50%!important;
+      }
+      .pricebutton {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin-left: 5%!important;
+      }
+  
+      .form-controlfinal {
+        width: 90%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        margin-left:6%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }}

@@ -1,7 +1,7 @@
 
     table {
       position: absolute;
-      top: 4%;
+      top: 9%;
       width: 100%;
       text-align: center;
       margin-top: 130px!important;
@@ -336,16 +336,50 @@
       color: #a80606;
     }
     .all3{
-      margin-left: 13%!important;
+      margin-left: 22%!important;
       margin-top: 1%!important;
     }
+    .all2 {
+      display: flex;
+      justify-content: space-between; /* Align items to the start and end of the container */
+      align-items: center; 
+    }
+    
+    .menu-icon {
+      margin-right: 20px; 
+      cursor: pointer;
+    }
+    
+    .side-menu {
+      position: absolute;
+      top: 50px; 
+      right: 20px; 
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      z-index: 999; /* Ensure the menu is on top of other elements */
+    }
+    .all-sidemenu{
+      display: inline;
+    }
+    .side-menu .button-18 {
+      margin-left: 10px!important; 
+    }
+    
+    .depimg6{
+    
+      margin-left: 20px!important;
+      height: 50px;
+      width: 150px;
+      }
     
     @media only screen and (max-width: 768px) {
-      .depimg2{
+      .depimg6{
       height: 50px!important;
-      width: 100px!important;
+      width: 75px!important;
       margin-bottom: 10px!important;
       }
+    
       .country-header {
         text-align: left;
       }
@@ -356,11 +390,9 @@
     
       .table {
         width: 600px; 
-        margin-top: 100px;
+        margin-top: 60px!important;
         margin-left: 0px;/* Make the table take full width */
       }
-    
-      
     
       .table tr:hover td {
         display: table-cell;
@@ -377,8 +409,27 @@
       .all{
         margin-left: 0px!important;
       }
+      .menu-icon {
+        cursor: pointer;
+        margin-right:30%!important;
+      }
+      
+      .side-menu {
+       margin-right: 22%!important;
+       width: 95px!important;
+      }
+  
+      .all-sidemenu{
+        display: inline-block;
+      }
+      .side-menu .button-18,
+      .side-menu .button-17 {
+        width: 60%!important; /* Set the width of buttons to 100% of the side menu */
+        margin-left: -2%!important;
+        margin-bottom: -2%!important;
+        
+      }
     }
-    
     
     
     .button-19 {
@@ -462,7 +513,15 @@
       margin-top: 10px;
     }
     
+    
+    .side-menu .button-18,
+    .side-menu .button-17 {
+      width: 100%; /* Set the width of buttons to 100% of the side menu */
+      margin-bottom: 10px; /* Add margin-bottom to create space between buttons */
+    }
+
     @media only screen and (max-width: 768px) {
+      
       .button-19 {
         margin: 0; 
         margin-top: 20px;
@@ -481,7 +540,7 @@
 
       table {
         position: absolute;
-        top: 13%;
+        top: 15%;
         width: 100%;
         text-align: left;
         margin-top: 125px!important;
@@ -525,13 +584,35 @@
       }
       .all3{
         margin: 0px!important;
-        margin-left: -2%!important;
+        margin-left: 10%!important;
       }
      
+    .menu-icon {
+      cursor: pointer;
+      margin-right:30%!important;
     }
     
-    .depimg2{
-      margin-left: -10%!important;
+    .side-menu {
+     margin-right: 22%!important;
+     width: 90px!important;
+    }
+
+    .all-sidemenu{
+      display: inline-block;
+    }
+
+    .side-menu .button-18,
+    .side-menu .button-17 {
+      width: 60%!important; /* Set the width of buttons to 100% of the side menu */
+      margin-left: -2%!important;
+      margin-bottom: -2%!important;
+      
+    }
+  }
+    
+    .depimg6{
+      margin-left: 13%!important;
+      width: 130px;
     }
     
     .all2{
@@ -634,3 +715,4 @@
     .all3{
       margin-left: 300px;
     }
+
